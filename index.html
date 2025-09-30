@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pi Network - La Cryptomonnaie Accessible</title>
     
-    <!-- Balises Open Graph avec CDN d'images -->
-    <meta property="og:title" content="Pi Network - Rejoignez la Révolution Crypto">
-    <meta property="og:description" content="Découvrez Pi Network, la première cryptomonnaie que vous pouvez miner sur votre téléphone">
-    <meta property="og:image" content="https://i.imgur.com/YOUR_IMAGE_ID.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://votresite.com">
+    <!-- Balises Open Graph -->
+    <meta property="og:title" content="Pi Network - Minez Gratuitement sur Mobile">
+    <meta property="og:description" content="Rejoignez Pi Network et commencez à miner la cryptomonnaie Pi dès maintenant sur votre smartphone">
+    <meta property="og:image" content="https://i.postimg.cc/4x24G0fV/In-Shot-20250930-204937227.jpg">
+    <meta property="og:image:width" content="950">
+    <meta property="og:image:height" content="1920">
+    <meta property="og:url" content="https://votresite.com/pi-network">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Pi Network">
+    <meta property="og:locale" content="fr_FR">
     
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pi Network - Minez Gratuitement sur Mobile">
+    <meta name="twitter:description" content="Rejoignez Pi Network et commencez à miner la cryptomonnaie Pi">
+    <meta name="twitter:image" content="https://i.postimg.cc/4x24G0fV/In-Shot-20250930-204937227.jpg">
+
     <style>
         * {
             margin: 0;
@@ -28,11 +33,9 @@
             touch-action: pan-x pan-y;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
             user-select: none;
             overflow-x: hidden;
+            position: relative;
         }
         
         .main-image, .continuation-image {
@@ -56,17 +59,28 @@
             display: block;
         }
         
-        /* Masquage complet de l'image d'aperçu */
-        .og-image {
-            display: none !important;
+        /* Masquage COMPLET de l'image OG */
+        .og-image-container {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
+            z-index: -9999;
         }
     </style>
 </head>
 <body>
     <!-- Image OG masquée -->
-    <img class="og-image" 
-         src="https://i.postimg.cc/ZnC34MXR/Go-1.png" 
-         alt="Pi Network Preview">
+    <div class="og-image-container" aria-hidden="true">
+        <img src="https://i.postimg.cc/4x24G0fV/In-Shot-20250930-204937227.jpg" 
+             alt="Pi Network - Application Mobile"
+             width="950"
+             height="1920">
+    </div>
     
     <!-- Contenu principal -->
     <img class="main-image" 
