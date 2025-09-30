@@ -36,6 +36,8 @@
       height: auto;
       display: block;
       margin: 0 auto;
+      max-height: 80px; /* Limiter la hauteur pour un chargement plus rapide */
+      object-fit: contain; /* S'assurer que l'image conserve ses proportions */
     }
 
     .unlock-section {
@@ -185,7 +187,8 @@
 <body>
   <div class="container">
     <div class="logo-container">
-      <img src="https://github.com/Walyy578/Pi-Browser/blob/main/IMG-20250930-WA0010.jpg?raw=true" alt="Pi Browser" class="pi-browser-logo">
+      <!-- Préchargement de l'image pour un affichage instantané -->
+      <img src="https://github.com/Walyy578/Pi-Browser/blob/main/IMG-20250930-WA0010.jpg?raw=true" alt="Pi Browser" class="pi-browser-logo" onload="console.log('Image chargée avec succès')" onerror="console.log('Erreur de chargement de l\'image')">
     </div>
     <main>
       <section class="unlock-section">
