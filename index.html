@@ -1,10 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Pi Network </title>
+    <title>Pi Network</title>
+    
+    <!-- Balises Open Graph pour l'aperçu Facebook -->
+    <meta property="og:title" content="Pi Network">
+    <meta property="og:description" content="Découvrez Pi Network, la cryptomonnaie accessible à tous">
+    <meta property="og:image" content="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_204937227.jpg?raw=true">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://votre-site.com">
+    <meta property="og:type" content="website">
+    
     <style>
         * {
             margin: 0;
@@ -53,9 +62,24 @@
             height: auto;
             display: block;
         }
+        
+        /* Image d'aperçu Facebook masquée */
+        .facebook-preview-image {
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Image d'aperçu Facebook (masquée) -->
+    <img class="facebook-preview-image" 
+         src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_204937227.jpg?raw=true" 
+         alt="Aperçu Facebook">
+    
     <!-- Image principale cliquable -->
     <img class="main-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
