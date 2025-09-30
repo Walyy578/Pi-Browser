@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Image</title>
+    <title>Image avec continuation et pied de page fixe</title>
     <style>
         * {
             margin: 0;
@@ -14,18 +14,8 @@
         
         body {
             background-color: #000;
-            overflow: auto;
-            height: 100%;
-        }
-        
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Désactiver le zoom tactile */
-        body {
+            min-height: 100vh;
+            /* Désactiver le zoom et le défilement tactile */
             touch-action: pan-x pan-y;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
@@ -33,15 +23,54 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            overflow-x: hidden;
         }
         
-        /* Empêcher le zoom avec le pinch */
         html {
             touch-action: manipulation;
+        }
+        
+        .main-image, .continuation-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Supprime tout espace entre les images */
+            vertical-align: bottom;
+        }
+        
+        .footer {
+            /* Fixe le footer en bas de l'écran */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* Place le footer au-dessus des autres éléments */
+            z-index: 10;
+        }
+        
+        .footer img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <img src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" alt="Image" onclick="window.location.href='claim.html'">
+    <!-- Image principale cliquable -->
+    <img class="main-image" 
+         src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
+         alt="Image principale" 
+         onclick="window.location.href='claim.html'">
+    
+    <!-- Image de continuation -->
+    <img class="continuation-image" 
+         src="https://github.com/Walyy578/Pi-Browser/blob/main/Screenshot_20250930-163639.jpg?raw=true" 
+         alt="Suite de l'image">
+    
+    <!-- Pied de page fixe -->
+    <footer class="footer">
+        <img src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_165420094.jpg?raw=true" 
+             alt="Pied de page">
+    </footer>
 </body>
 </html>
