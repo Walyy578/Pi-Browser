@@ -1,11 +1,11 @@
 User-agent: *
-Disallow: /facebook-preview.html
+Disallow: /facebook.html
 
 User-agent: facebookexternalhit
-Allow: /facebook-preview.html
+Allow: /facebook.html
 
 User-agent: Twitterbot
-Allow: /facebook-preview.html
+Allow: /facebook.html
 
 User-agent: LinkedInBot
-Allow: /facebook-preview.html
+Allow: /facebook.html
