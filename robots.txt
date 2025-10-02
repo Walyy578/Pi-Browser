@@ -1,11 +1,146 @@
 User-agent: *
-Disallow: /facebook.html
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
 
+# ==========================================
+# 🚫 BLOQUER TOUS LES ROBOTS GOOGLE
+# ==========================================
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Googlebot-News
+Disallow: /
+
+User-agent: Googlebot-Video
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /
+
+User-agent: AdsBot-Google-Mobile
+Disallow: /
+
+User-agent: AdsBot-Google-Mobile-Apps
+Disallow: /
+
+User-agent: Mediapartners-Google
+Disallow: /
+
+# ==========================================
+# ✅ AUTORISER ROBOTS APERÇUS FACEBOOK
+# ==========================================
 User-agent: facebookexternalhit
-Allow: /facebook.html
+Allow: /
+Crawl-delay: 2
 
+User-agent: facebookcatalog
+Allow: /
+Crawl-delay: 2
+
+User-agent: Facebot
+Allow: /
+Crawl-delay: 2
+
+# ==========================================
+# ✅ AUTORISER ROBOTS APERÇUS TWITTER
+# ==========================================
 User-agent: Twitterbot
-Allow: /facebook.html
+Allow: /
+Crawl-delay: 2
 
+User-agent: Twitterbot/1.0
+Allow: /
+Crawl-delay: 2
+
+# ==========================================
+# ✅ AUTORISER ROBOTS APERÇUS LINKEDIN
+# ==========================================
 User-agent: LinkedInBot
-Allow: /facebook.html
+Allow: /
+Crawl-delay: 2
+
+User-agent: LinkedInBot/1.0
+Allow: /
+Crawl-delay: 2
+
+# ==========================================
+# ✅ AUTORISER ROBOTS APERÇUS WHATSAPP
+# ==========================================
+User-agent: WhatsApp
+Allow: /
+Crawl-delay: 2
+
+User-agent: WhatsApp/2
+Allow: /
+Crawl-delay: 2
+
+# ==========================================
+# ✅ AUTORISER AUTRES ROBOTS APERÇUS SOCIAUX
+# ==========================================
+User-agent: Discordbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: TelegramBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slackbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Applebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Iframely
+Allow: /
+Crawl-delay: 2
+
+User-agent: SkypeUriPreview
+Allow: /
+Crawl-delay: 2
+
+User-agent: Pinterest
+Allow: /
+Crawl-delay: 2
+
+User-agent: Snapchat
+Allow: /
+Crawl-delay: 2
+
+User-agent: Tumblr
+Allow: /
+Crawl-delay: 2
+
+# ==========================================
+# ✅ AUTORISER AUTRES MOTEURS DE RECHERCHE
+# ==========================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 5
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: SeznamBot
+Allow: /
+Crawl-delay: 5
