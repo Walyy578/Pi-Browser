@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Pi Network - Vendez Maintenant, Recevez Cash Instantané! | Plateforme Officielle</title>
+    <title>Pi Network - SELL NOW, Get INSTANT CASH! | Pinetwork.com</title>
     
-    <!-- Balises Open Graph essentielles pour WhatsApp -->
-    <meta property="og:title" content="Pi Network - Vendez Maintenant, Recevez Cash Instantané!">
-    <meta property="og:description" content="🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées">
+    <!-- Balises Open Graph en ANGLAIS par défaut pour Facebook -->
+    <meta property="og:title" content="Pi Network - SELL NOW, Get INSTANT CASH! | AmazingPaye.com">
+    <meta property="og:description" content="🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal, Western Union. Best rates ⚡ Secure transactions | AmazingPaye.com">
     <meta property="og:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://amazingpaye.com">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Pi Network Cash">
+    <meta property="og:site_name" content="AmazingPaye.com">
+    <meta property="og:locale" content="en_US">
     
-    <!-- Balises Twitter -->
+    <!-- Balises Twitter en ANGLAIS -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pi Network - Vendez Maintenant, Recevez Cash Instantané!">
-    <meta name="twitter:description" content="🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal">
+    <meta name="twitter:title" content="Pi Network - SELL NOW, Get INSTANT CASH! | AmazingPaye.com">
+    <meta name="twitter:description" content="🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal | AmazingPaye.com">
     <meta name="twitter:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
-    <meta name="twitter:image:alt" content="Vendez vos Pi - Recevez Cash Immédiatement">
+    <meta name="twitter:image:alt" content="SELL PI - Get INSTANT CASH Now! Official Pi Network platform - AmazingPaye.com">
 
-    <!-- Meta description pour SEO -->
-    <meta name="description" content="Plateforme officielle Pi Network - Vendez vos Pi et recevez de l'argent comptant immédiatement. Mobile Money, PayPal, Western Union">
+    <!-- Meta description pour SEO en ANGLAIS -->
+    <meta name="description" content="Official Pi Network Platform - Sell your Pi and receive instant cash immediately. Mobile Money, PayPal, Western Union. Best rates, secure transactions.">
 
-    <!-- Préchargement de l'image pour WhatsApp -->
+    <!-- Préchargement de l'image -->
     <link rel="preload" as="image" href="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
-    
-    <!-- Balises supplémentaires pour WhatsApp -->
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:updated_time" content="2024-01-01T00:00:00Z">
 
     <style>
         * {
@@ -79,7 +76,7 @@
             display: block;
         }
         
-        /* Section visible uniquement pour les robots WhatsApp/Facebook */
+        /* Section visible uniquement pour les robots sociaux */
         .social-preview {
             position: absolute;
             width: 1px;
@@ -121,92 +118,95 @@
             font-size: 12px;
             margin-bottom: 8px;
         }
+
+        /* Loading indicator */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 16px;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
-    <!-- Section spéciale pour les robots sociaux (WhatsApp, Facebook) -->
+    <!-- Loading indicator -->
+    <div class="loading" id="loading">Loading...</div>
+
+    <!-- Section spéciale pour les robots sociaux EN ANGLAIS -->
     <div class="social-preview" aria-hidden="true">
         <img class="social-image" 
              src="https://i.postimg.cc/3x0Nrn1p/Go-2.png" 
-             alt="VENDEZ PI - Recevez CASH Immédiatement! Plateforme officielle Pi Network">
-        <h1>Pi Network - Vendez Maintenant, Recevez Cash Instantané!</h1>
-        <p>🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées</p>
+             alt="SELL PI - Get INSTANT CASH Now! Official Pi Network platform - AmazingPaye.com">
+        <h1>Pi Network - SELL NOW, Get INSTANT CASH! | AmazingPaye.com</h1>
+        <p>🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal, Western Union. Best rates ⚡ Secure transactions | AmazingPaye.com</p>
     </div>
     
+    <!-- Message de la Core Team (sera mis à jour par JavaScript) -->
+    <div class="core-team-message">
+        <div class="core-team-badge">OFFICIAL CORE TEAM MESSAGE</div>
+        <div>Sell your Pi now! Transform your Pi into cash immediately via Mobile Money, PayPal or Western Union.</div>
+    </div>
     
     <!-- Image principale cliquable -->
     <img class="main-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
-         alt="CLIQUEZ ICI pour VENDRE vos Pi - Argent Immédiat! Plateforme sécurisée Pi Network" 
-         onclick="window.location.href='claim.html'">
+         alt="CLICK HERE to SELL your Pi - Instant Money! Secure Pi Network Platform - AmazingPaye.com" 
+         onclick="redirectToClaim()">
     
     <!-- Image de continuation -->
     <img class="continuation-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/Screenshot_20250930-163639.jpg?raw=true" 
-         alt="Plateforme de vente Pi - Retrait Instantané - Mobile Money, PayPal, Western Union">
+         alt="Pi Selling Platform - Instant Withdrawal - Mobile Money, PayPal, Western Union - AmazingPaye.com">
     
     <!-- Pied de page fixe -->
     <footer class="footer">
         <img src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_165420094.jpg?raw=true" 
-             alt="RECEVEZ VOTRE ARGENT MAINTENANT - Pi Network - Vente sécurisée">
+             alt="RECEIVE YOUR MONEY NOW - Pi Network - Secure Selling - AmazingPaye.com">
     </footer>
 
     <script>
+        // ==========================================
         // CONFIGURATION MULTILINGUE COMPLÈTE
+        // ==========================================
         const socialConfig = {
             en: {
-                title: "Pi Network - SELL NOW, Get INSTANT CASH!",
-                description: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal, Western Union. Best rates ⚡ Secure transactions",
-                twitterDescription: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal",
-                imageAlt: "SELL PI - Get INSTANT CASH Now! Official Pi Network platform"
+                title: "Pi Network - SELL NOW, Get INSTANT CASH! | AmazingPaye.com",
+                description: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal, Western Union. Best rates ⚡ Secure transactions | AmazingPaye.com",
+                twitterDescription: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal | AmazingPaye.com",
+                imageAlt: "SELL PI - Get INSTANT CASH Now! Official Pi Network platform - AmazingPaye.com",
+                coreBadge: "OFFICIAL CORE TEAM MESSAGE",
+                coreText: "Sell your Pi now! Transform your Pi into cash immediately via Mobile Money, PayPal or Western Union.",
+                metaDescription: "Official Pi Network Platform - Sell your Pi and receive instant cash immediately. Mobile Money, PayPal, Western Union. Best rates, secure transactions."
             },
             fr: {
-                title: "Pi Network - Vendez Maintenant, Recevez Cash Instantané!",
-                description: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées",
-                twitterDescription: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal",
-                imageAlt: "VENDEZ PI - Recevez CASH Immédiatement! Plateforme officielle Pi Network"
+                title: "Pi Network - Vendez Maintenant, Recevez Cash Instantané! | AmazingPaye.com",
+                description: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées | AmazingPaye.com",
+                twitterDescription: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal | AmazingPaye.com",
+                imageAlt: "VENDEZ PI - Recevez CASH Immédiatement! Plateforme officielle Pi Network - AmazingPaye.com",
+                coreBadge: "MESSAGE OFFICIEL CORE TEAM",
+                coreText: "Vendez vos Pi maintenant ! Transformez vos Pi en argent comptant immédiatement via Mobile Money, PayPal ou Western Union.",
+                metaDescription: "Plateforme officielle Pi Network - Vendez vos Pi et recevez de l'argent comptant immédiatement. Mobile Money, PayPal, Western Union. Taux compétitifs, transactions sécurisées."
             },
             es: {
-                title: "Pi Network - ¡Vende YA, Recibe Efectivo INMEDIATO!",
-                description: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal, Western Union. Mejores tasas ⚡ Transacciones seguras",
-                twitterDescription: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal",
-                imageAlt: "VENDER PI - ¡Recibe EFECTIVO Inmediato! Plataforma oficial Pi Network"
-            },
-            de: {
-                title: "Pi Network - JETZT Verkaufen, Sofort BARGELD!",
-                description: "🚀 VERKAUFEN Sie Ihre Pi für ECHTES GELD! SOFORTIGE Auszahlung per Mobile Money, PayPal, Western Union. Beste Kurse ⚡ Sichere Transaktionen",
-                twitterDescription: "🚀 VERKAUFEN Sie Ihre Pi für ECHTES GELD! SOFORTIGE Auszahlung per Mobile Money, PayPal",
-                imageAlt: "PI VERKAUFEN - Sofort BARGELD erhalten! Offizielle Pi Network Plattform"
-            },
-            ar: {
-                title: "Pi Network - بِع الآن، احصل على نقدي فوري!",
-                description: "🚀 بِع عملات Pi الخاصة بك مقابل أموال حقيقية! سحب فوري عبر Mobile Money أو PayPal أو Western Union. أفضل الأسعار ⚡ معاملات آمنة",
-                twitterDescription: "🚀 بِع عملات Pi الخاصة بك مقابل أموال حقيقية! سحب فوري عبر Mobile Money أو PayPal",
-                imageAlt: "بيع PI - احصل على نقدي فوري! منصة Pi Network الرسمية"
-            },
-            pt: {
-                title: "Pi Network - Venda AGORA, Receba DINHEIRO Instantâneo!",
-                description: "🚀 VENDA seus Pi por DINHEIRO REAL! Saque INSTANTÂNEO via Mobile Money, PayPal, Western Union. Melhores taxas ⚡ Transações seguras",
-                twitterDescription: "🚀 VENDA seus Pi por DINHEIRO REAL! Saque INSTANTÂNEO via Mobile Money, PayPal",
-                imageAlt: "VENDER PI - Receba DINHEIRO Imediato! Plataforma oficial Pi Network"
-            },
-            ru: {
-                title: "Pi Network - Продавайте СЕЙЧАС, Получите НАЛИЧНЫЕ Мгновенно!",
-                description: "🚀 ПРОДАВАЙТЕ ваши Pi за РЕАЛЬНЫЕ ДЕНЬГИ! МГНОВЕННЫЙ вывод через Mobile Money, PayPal, Western Union. Лучшие курсы ⚡ Безопасные транзакции",
-                twitterDescription: "🚀 ПРОДАВАЙТЕ ваши Pi за РЕАЛЬНЫЕ ДЕНЬГИ! МГНОВЕННЫЙ вывод через Mobile Money, PayPal",
-                imageAlt: "ПРОДАТЬ PI - Получите НАЛИЧНЫЕ Сразу! Официальная платформа Pi Network"
-            },
-            zh: {
-                title: "Pi Network - 立即出售，获得即时现金！",
-                description: "🚀 出售您的Pi获得真实现金！通过Mobile Money、PayPal、Western Union即时提现。最优汇率 ⚡ 安全交易",
-                twitterDescription: "🚀 出售您的Pi获得真实现金！通过Mobile Money、PayPal即时提现",
-                imageAlt: "出售PI - 立即获得现金！Pi Network官方平台"
+                title: "Pi Network - ¡Vende YA, Recibe Efectivo INMEDIATO! | AmazingPaye.com",
+                description: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal, Western Union. Mejores tasas ⚡ Transacciones seguras | AmazingPaye.com",
+                twitterDescription: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal | AmazingPaye.com",
+                imageAlt: "VENDER PI - ¡Recibe EFECTIVO Inmediato! Plataforma oficial Pi Network - AmazingPaye.com",
+                coreBadge: "MENSAJE OFICIAL DEL CORE TEAM",
+                coreText: "¡Vende tus Pi ahora! Transforma tus Pi en efectivo inmediatamente vía Mobile Money, PayPal o Western Union.",
+                metaDescription: "Plataforma oficial Pi Network - Vende tus Pi y recibe efectivo inmediatamente. Mobile Money, PayPal, Western Union. Mejores tasas, transacciones seguras."
             }
         };
 
+        // ==========================================
         // DÉTECTION INTELLIGENTE DE LA LANGUE
+        // ==========================================
         function detectLanguage() {
-            // 1. Vérifier le paramètre URL 'lang'
+            // 1. Vérifier le paramètre URL 'lang' (PRIORITÉ MAXIMUM)
             const urlParams = new URLSearchParams(window.location.search);
             const urlLang = urlParams.get('lang');
             if (urlLang && socialConfig[urlLang]) {
@@ -223,67 +223,51 @@
                 return shortLang;
             }
 
-            // 3. Vérifier les langues secondaires du navigateur
-            if (navigator.languages) {
-                for (let lang of navigator.languages) {
-                    const short = lang.split('-')[0];
-                    if (socialConfig[short]) {
-                        console.log('🌐 Langue détectée via languages:', short);
-                        return short;
-                    }
-                }
-            }
-
-            // 4. Détection spéciale pour les robots sociaux
-            const userAgent = navigator.userAgent.toLowerCase();
-            
-            // WhatsApp (généralement suit la langue du téléphone)
-            if (userAgent.includes('whatsapp')) {
-                console.log('📱 WhatsApp détecté, utilisation de la langue navigateur');
-                return shortLang || 'fr';
-            }
-            
-            // Facebook
-            if (userAgent.includes('facebook')) {
-                console.log('📘 Facebook détecté');
-                // Facebook peut passer fb_locale dans l'URL
-                const fbLocale = urlParams.get('fb_locale');
-                if (fbLocale) {
-                    const fbLang = fbLocale.split('_')[0];
-                    if (socialConfig[fbLang]) return fbLang;
-                }
-            }
-
-            // 5. Par défaut français
-            console.log('🌐 Langue par défaut: français');
-            return 'fr';
+            // 3. Par défaut ANGLAIS pour maximiser la portée internationale
+            console.log('🌐 Langue par défaut: ENGLISH (international)');
+            return 'en';
         }
 
+        // ==========================================
         // METTRE À JOUR LES BALISES SOCIALES
+        // ==========================================
         function updateSocialMetaTags() {
             const lang = detectLanguage();
-            const config = socialConfig[lang] || socialConfig.fr;
+            const config = socialConfig[lang] || socialConfig.en;
             
-            console.log('🎯 Mise à jour des meta tags pour:', lang, config.title);
+            console.log('🎯 Mise à jour des meta tags pour:', lang);
 
-            // Mettre à jour les balises OG
+            // Mettre à jour les balises OG (pour les visiteurs et WhatsApp)
             document.querySelector('meta[property="og:title"]').setAttribute('content', config.title);
             document.querySelector('meta[property="og:description"]').setAttribute('content', config.description);
-            document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://i.postimg.cc/3x0Nrn1p/Go-2.png');
             
             // Mettre à jour Twitter
             document.querySelector('meta[name="twitter:title"]').setAttribute('content', config.title);
             document.querySelector('meta[name="twitter:description"]').setAttribute('content', config.twitterDescription);
-            document.querySelector('meta[name="twitter:image"]').setAttribute('content', 'https://i.postimg.cc/3x0Nrn1p/Go-2.png');
             document.querySelector('meta[name="twitter:image:alt"]').setAttribute('content', config.imageAlt);
             
             // Mettre à jour le titre de la page
             document.title = config.title;
             
             // Mettre à jour la meta description
-            document.querySelector('meta[name="description"]').setAttribute('content', config.description);
+            document.querySelector('meta[name="description"]').setAttribute('content', config.metaDescription);
             
             // Mettre à jour la section sociale cachée
+            updateSocialPreviewSection(config);
+            
+            // Mettre à jour le message Core Team
+            updateCoreTeamMessage(config);
+            
+            // Mettre à jour les alt texts des images
+            updateImageAltTexts(config);
+            
+            return config;
+        }
+
+        // ==========================================
+        // METTRE À JOUR LA SECTION SOCIALE CACHÉE
+        // ==========================================
+        function updateSocialPreviewSection(config) {
             const socialSection = document.querySelector('.social-preview');
             if (socialSection) {
                 const h1 = socialSection.querySelector('h1');
@@ -296,70 +280,161 @@
             }
         }
 
+        // ==========================================
+        // METTRE À JOUR LE MESSAGE CORE TEAM
+        // ==========================================
+        function updateCoreTeamMessage(config) {
+            const badgeElement = document.querySelector('.core-team-badge');
+            const textElement = document.querySelector('.core-team-message div:last-child');
+            
+            if (badgeElement && config.coreBadge) {
+                badgeElement.textContent = config.coreBadge;
+            }
+            if (textElement && config.coreText) {
+                textElement.textContent = config.coreText;
+            }
+        }
+
+        // ==========================================
+        // METTRE À JOUR LES TEXTES ALTERNATIFS DES IMAGES
+        // ==========================================
+        function updateImageAltTexts(config) {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const src = img.src.toLowerCase();
+                if (src.includes('inshot_20250930_103151554')) {
+                    img.alt = "CLICK HERE to SELL your Pi - Instant Money! Secure Pi Network Platform - AmazingPaye.com";
+                } else if (src.includes('screenshot_20250930-163639')) {
+                    img.alt = "Pi Selling Platform - Instant Withdrawal - Mobile Money, PayPal, Western Union - AmazingPaye.com";
+                } else if (src.includes('inshot_20250930_165420094')) {
+                    img.alt = "RECEIVE YOUR MONEY NOW - Pi Network - Secure Selling - AmazingPaye.com";
+                }
+            });
+        }
+
+        // ==========================================
         // PRÉCHARGEMENT INTELLIGENT DE L'IMAGE
+        // ==========================================
         function preloadSocialImage() {
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve) => {
                 const img = new Image();
                 img.src = 'https://i.postimg.cc/3x0Nrn1p/Go-2.png?' + new Date().getTime();
                 img.onload = () => {
-                    console.log('✅ Image sociale préchargée avec succès');
+                    console.log('✅ Social image preloaded successfully');
                     resolve(true);
                 };
                 img.onerror = () => {
-                    console.log('❌ Erreur de chargement de l\'image sociale');
-                    reject(false);
+                    console.log('⚠️ Image not loaded, continuing...');
+                    resolve(false);
                 };
             });
         }
 
-        // OPTIMISATION POUR RÉSEAUX SOCIAUX
-        function optimizeForSocialNetworks() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            console.log('🔍 User Agent:', userAgent);
-            
-            // Détecter le type de robot/application
-            if (userAgent.includes('whatsapp')) {
-                console.log('📱 Optimisation pour WhatsApp');
-            } else if (userAgent.includes('facebook')) {
-                console.log('📘 Optimisation pour Facebook');
-            } else if (userAgent.includes('twitter')) {
-                console.log('🐦 Optimisation pour Twitter');
-            } else {
-                console.log('🌐 Visiteur normal');
+        // ==========================================
+        // REDIRECTION VERS CLAIM
+        // ==========================================
+        function redirectToClaim() {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.style.display = 'block';
+                loading.textContent = 'Redirecting...';
             }
             
-            // Mettre à jour les meta tags
-            updateSocialMetaTags();
-            
-            // Précharger l'image
-            preloadSocialImage().catch(() => {
-                console.log('⚠️ Image non chargée, mais meta tags mis à jour');
-            });
+            setTimeout(() => {
+                window.location.href = 'claim.html';
+            }, 500);
         }
 
+        // ==========================================
+        // OPTIMISATION POUR RÉSEAUX SOCIAUX
+        // ==========================================
+        function optimizeForSocialNetworks() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            console.log('🔍 User Agent detected:', userAgent);
+            
+            // Mettre à jour les meta tags IMMÉDIATEMENT
+            const config = updateSocialMetaTags();
+            
+            // Précharger l'image
+            preloadSocialImage();
+            
+            // Mettre à jour le texte de loading
+            updateLoadingText();
+            
+            return config;
+        }
+
+        // ==========================================
+        // METTRE À JOUR LE TEXTE DE LOADING
+        // ==========================================
+        function updateLoadingText() {
+            const lang = detectLanguage();
+            const loading = document.getElementById('loading');
+            if (loading) {
+                const texts = {
+                    'en': 'Loading...',
+                    'fr': 'Chargement...',
+                    'es': 'Cargando...'
+                };
+                loading.textContent = texts[lang] || texts['en'];
+            }
+        }
+
+        // ==========================================
+        // GÉNÉRATEUR DE LIENS MULTILINGUES
+        // ==========================================
+        function generateMultilingualLinks() {
+            const links = {
+                en: 'https://amazingpaye.com/?lang=en',
+                fr: 'https://amazingpaye.com/?lang=fr',
+                es: 'https://amazingpaye.com/?lang=es'
+            };
+            
+            console.log('🔗 Multilingual links available:');
+            Object.keys(links).forEach(lang => {
+                console.log(`${lang.toUpperCase()}: ${links[lang]}`);
+            });
+            
+            return links;
+        }
+
+        // ==========================================
         // INITIALISATION
+        // ==========================================
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 Initialisation de la détection de langue...');
+            console.log('🚀 AmazingPaye.com - Initialization...');
             
-            optimizeForSocialNetworks();
+            // Optimiser pour les réseaux sociaux
+            const config = optimizeForSocialNetworks();
             
-            // Double vérification après 500ms
+            // Générer les liens multilingues
+            generateMultilingualLinks();
+            
+            // Vérification finale
             setTimeout(() => {
-                console.log('🔍 Vérification finale des meta tags:');
-                console.log('OG Title:', document.querySelector('meta[property="og:title"]').content);
-                console.log('OG Description:', document.querySelector('meta[property="og:description"]').content);
-                console.log('Page Title:', document.title);
-            }, 500);
+                console.log('✅ Initialization completed');
+                console.log('📊 Final status:');
+                console.log('Title:', document.title);
+                console.log('Language:', detectLanguage());
+                console.log('URL:', window.location.href);
+                console.log('🎯 Facebook preview will be in ENGLISH');
+            }, 1000);
         });
 
-        // Gestion du partage (pour les navigateurs qui supportent l'API Web Share)
+        // ==========================================
+        // GESTION DU PARTAGE NATIF
+        // ==========================================
         if (navigator.share) {
             document.addEventListener('click', function(e) {
                 if (e.target.classList.contains('main-image')) {
+                    e.preventDefault();
                     navigator.share({
                         title: document.title,
                         text: document.querySelector('meta[property="og:description"]').content,
                         url: window.location.href,
+                    }).catch(err => {
+                        console.log('Share cancelled:', err);
+                        redirectToClaim();
                     });
                 }
             });
