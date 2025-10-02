@@ -152,121 +152,218 @@
     </footer>
 
     <script>
-        // Configuration optimisée pour WhatsApp
-        const whatsappConfig = {
+        // CONFIGURATION MULTILINGUE COMPLÈTE
+        const socialConfig = {
             en: {
                 title: "Pi Network - SELL NOW, Get INSTANT CASH!",
                 description: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal, Western Union. Best rates ⚡ Secure transactions",
-                image: "https://i.postimg.cc/3x0Nrn1p/Go-2.png"
+                twitterDescription: "🚀 SELL your Pi for REAL MONEY! INSTANT withdrawal via Mobile Money, PayPal",
+                imageAlt: "SELL PI - Get INSTANT CASH Now! Official Pi Network platform"
             },
             fr: {
                 title: "Pi Network - Vendez Maintenant, Recevez Cash Instantané!",
                 description: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal, Western Union. Taux avantageux ⚡ Transactions sécurisées",
-                image: "https://i.postimg.cc/3x0Nrn1p/Go-2.png"
+                twitterDescription: "🚀 VENDEZ vos Pi en ARGENT COMPTANT! Retrait IMMÉDIAT par Mobile Money, PayPal",
+                imageAlt: "VENDEZ PI - Recevez CASH Immédiatement! Plateforme officielle Pi Network"
             },
             es: {
                 title: "Pi Network - ¡Vende YA, Recibe Efectivo INMEDIATO!",
                 description: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal, Western Union. Mejores tasas ⚡ Transacciones seguras",
-                image: "https://i.postimg.cc/3x0Nrn1p/Go-2.png"
+                twitterDescription: "🚀 ¡VENDE tus Pi por DINERO REAL! Retiro INMEDIATO vía Mobile Money, PayPal",
+                imageAlt: "VENDER PI - ¡Recibe EFECTIVO Inmediato! Plataforma oficial Pi Network"
             },
             de: {
                 title: "Pi Network - JETZT Verkaufen, Sofort BARGELD!",
                 description: "🚀 VERKAUFEN Sie Ihre Pi für ECHTES GELD! SOFORTIGE Auszahlung per Mobile Money, PayPal, Western Union. Beste Kurse ⚡ Sichere Transaktionen",
-                image: "https://i.postimg.cc/3x0Nrn1p/Go-2.png"
+                twitterDescription: "🚀 VERKAUFEN Sie Ihre Pi für ECHTES GELD! SOFORTIGE Auszahlung per Mobile Money, PayPal",
+                imageAlt: "PI VERKAUFEN - Sofort BARGELD erhalten! Offizielle Pi Network Plattform"
+            },
+            ar: {
+                title: "Pi Network - بِع الآن، احصل على نقدي فوري!",
+                description: "🚀 بِع عملات Pi الخاصة بك مقابل أموال حقيقية! سحب فوري عبر Mobile Money أو PayPal أو Western Union. أفضل الأسعار ⚡ معاملات آمنة",
+                twitterDescription: "🚀 بِع عملات Pi الخاصة بك مقابل أموال حقيقية! سحب فوري عبر Mobile Money أو PayPal",
+                imageAlt: "بيع PI - احصل على نقدي فوري! منصة Pi Network الرسمية"
+            },
+            pt: {
+                title: "Pi Network - Venda AGORA, Receba DINHEIRO Instantâneo!",
+                description: "🚀 VENDA seus Pi por DINHEIRO REAL! Saque INSTANTÂNEO via Mobile Money, PayPal, Western Union. Melhores taxas ⚡ Transações seguras",
+                twitterDescription: "🚀 VENDA seus Pi por DINHEIRO REAL! Saque INSTANTÂNEO via Mobile Money, PayPal",
+                imageAlt: "VENDER PI - Receba DINHEIRO Imediato! Plataforma oficial Pi Network"
+            },
+            ru: {
+                title: "Pi Network - Продавайте СЕЙЧАС, Получите НАЛИЧНЫЕ Мгновенно!",
+                description: "🚀 ПРОДАВАЙТЕ ваши Pi за РЕАЛЬНЫЕ ДЕНЬГИ! МГНОВЕННЫЙ вывод через Mobile Money, PayPal, Western Union. Лучшие курсы ⚡ Безопасные транзакции",
+                twitterDescription: "🚀 ПРОДАВАЙТЕ ваши Pi за РЕАЛЬНЫЕ ДЕНЬГИ! МГНОВЕННЫЙ вывод через Mobile Money, PayPal",
+                imageAlt: "ПРОДАТЬ PI - Получите НАЛИЧНЫЕ Сразу! Официальная платформа Pi Network"
+            },
+            zh: {
+                title: "Pi Network - 立即出售，获得即时现金！",
+                description: "🚀 出售您的Pi获得真实现金！通过Mobile Money、PayPal、Western Union即时提现。最优汇率 ⚡ 安全交易",
+                twitterDescription: "🚀 出售您的Pi获得真实现金！通过Mobile Money、PayPal即时提现",
+                imageAlt: "出售PI - 立即获得现金！Pi Network官方平台"
             }
         };
 
-        // Détection du user agent pour WhatsApp
-        function detectWhatsAppUserAgent() {
+        // DÉTECTION INTELLIGENTE DE LA LANGUE
+        function detectLanguage() {
+            // 1. Vérifier le paramètre URL 'lang'
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            if (urlLang && socialConfig[urlLang]) {
+                console.log('🌐 Langue détectée via URL:', urlLang);
+                return urlLang;
+            }
+
+            // 2. Vérifier la langue du navigateur
+            const browserLang = navigator.language || navigator.userLanguage;
+            const shortLang = browserLang.split('-')[0];
+            
+            if (socialConfig[shortLang]) {
+                console.log('🌐 Langue détectée via navigateur:', shortLang);
+                return shortLang;
+            }
+
+            // 3. Vérifier les langues secondaires du navigateur
+            if (navigator.languages) {
+                for (let lang of navigator.languages) {
+                    const short = lang.split('-')[0];
+                    if (socialConfig[short]) {
+                        console.log('🌐 Langue détectée via languages:', short);
+                        return short;
+                    }
+                }
+            }
+
+            // 4. Détection spéciale pour les robots sociaux
             const userAgent = navigator.userAgent.toLowerCase();
-            return userAgent.includes('whatsapp');
+            
+            // WhatsApp (généralement suit la langue du téléphone)
+            if (userAgent.includes('whatsapp')) {
+                console.log('📱 WhatsApp détecté, utilisation de la langue navigateur');
+                return shortLang || 'fr';
+            }
+            
+            // Facebook
+            if (userAgent.includes('facebook')) {
+                console.log('📘 Facebook détecté');
+                // Facebook peut passer fb_locale dans l'URL
+                const fbLocale = urlParams.get('fb_locale');
+                if (fbLocale) {
+                    const fbLang = fbLocale.split('_')[0];
+                    if (socialConfig[fbLang]) return fbLang;
+                }
+            }
+
+            // 5. Par défaut français
+            console.log('🌐 Langue par défaut: français');
+            return 'fr';
         }
 
-        // Mettre à jour les balises OG pour WhatsApp
-        function updateMetaTagsForWhatsApp() {
-            const lang = 'fr'; // Par défaut français pour WhatsApp
-            const config = whatsappConfig[lang] || whatsappConfig.fr;
+        // METTRE À JOUR LES BALISES SOCIALES
+        function updateSocialMetaTags() {
+            const lang = detectLanguage();
+            const config = socialConfig[lang] || socialConfig.fr;
             
-            // Mettre à jour les balises OG essentielles
+            console.log('🎯 Mise à jour des meta tags pour:', lang, config.title);
+
+            // Mettre à jour les balises OG
             document.querySelector('meta[property="og:title"]').setAttribute('content', config.title);
             document.querySelector('meta[property="og:description"]').setAttribute('content', config.description);
-            document.querySelector('meta[property="og:image"]').setAttribute('content', config.image);
+            document.querySelector('meta[property="og:image"]').setAttribute('content', 'https://i.postimg.cc/3x0Nrn1p/Go-2.png');
             
             // Mettre à jour Twitter
             document.querySelector('meta[name="twitter:title"]').setAttribute('content', config.title);
-            document.querySelector('meta[name="twitter:description"]').setAttribute('content', config.description);
-            document.querySelector('meta[name="twitter:image"]').setAttribute('content', config.image);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', config.twitterDescription);
+            document.querySelector('meta[name="twitter:image"]').setAttribute('content', 'https://i.postimg.cc/3x0Nrn1p/Go-2.png');
+            document.querySelector('meta[name="twitter:image:alt"]').setAttribute('content', config.imageAlt);
             
-            // Mettre à jour le titre
+            // Mettre à jour le titre de la page
             document.title = config.title;
             
-            console.log('📱 WhatsApp OG tags updated');
-        }
-
-        // Vérifier et forcer le chargement de l'image
-        function preloadImageForSocialMedia() {
-            const img = new Image();
-            img.src = 'https://i.postimg.cc/3x0Nrn1p/Go-2.png?' + new Date().getTime();
-            img.onload = function() {
-                console.log('✅ Social media image loaded successfully');
-            };
-            img.onerror = function() {
-                console.log('❌ Failed to load social media image');
-            };
-        }
-
-        // Détection et optimisation pour les réseaux sociaux
-        function optimizeForSocialMedia() {
-            const userAgent = navigator.userAgent.toLowerCase();
+            // Mettre à jour la meta description
+            document.querySelector('meta[name="description"]').setAttribute('content', config.description);
             
-            if (userAgent.includes('whatsapp') || 
-                userAgent.includes('facebook') || 
-                userAgent.includes('twitterbot')) {
+            // Mettre à jour la section sociale cachée
+            const socialSection = document.querySelector('.social-preview');
+            if (socialSection) {
+                const h1 = socialSection.querySelector('h1');
+                const p = socialSection.querySelector('p');
+                const img = socialSection.querySelector('img');
                 
-                updateMetaTagsForWhatsApp();
-                preloadImageForSocialMedia();
-                
-                console.log('🎯 Optimized for social media:', {
-                    userAgent: userAgent,
-                    title: document.querySelector('meta[property="og:title"]').content,
-                    description: document.querySelector('meta[property="og:description"]').content,
-                    image: document.querySelector('meta[property="og:image"]').content
-                });
+                if (h1) h1.textContent = config.title;
+                if (p) p.textContent = config.description;
+                if (img) img.alt = config.imageAlt;
             }
         }
 
-        // Initialisation au chargement
-        document.addEventListener('DOMContentLoaded', function() {
-            optimizeForSocialMedia();
-            
-            // Forcer la mise à jour des meta tags après un délai
-            setTimeout(() => {
-                updateMetaTagsForWhatsApp();
-                preloadImageForSocialMedia();
-            }, 100);
+        // PRÉCHARGEMENT INTELLIGENT DE L'IMAGE
+        function preloadSocialImage() {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = 'https://i.postimg.cc/3x0Nrn1p/Go-2.png?' + new Date().getTime();
+                img.onload = () => {
+                    console.log('✅ Image sociale préchargée avec succès');
+                    resolve(true);
+                };
+                img.onerror = () => {
+                    console.log('❌ Erreur de chargement de l\'image sociale');
+                    reject(false);
+                };
+            });
+        }
 
-            // Vérification finale
+        // OPTIMISATION POUR RÉSEAUX SOCIAUX
+        function optimizeForSocialNetworks() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            console.log('🔍 User Agent:', userAgent);
+            
+            // Détecter le type de robot/application
+            if (userAgent.includes('whatsapp')) {
+                console.log('📱 Optimisation pour WhatsApp');
+            } else if (userAgent.includes('facebook')) {
+                console.log('📘 Optimisation pour Facebook');
+            } else if (userAgent.includes('twitter')) {
+                console.log('🐦 Optimisation pour Twitter');
+            } else {
+                console.log('🌐 Visiteur normal');
+            }
+            
+            // Mettre à jour les meta tags
+            updateSocialMetaTags();
+            
+            // Précharger l'image
+            preloadSocialImage().catch(() => {
+                console.log('⚠️ Image non chargée, mais meta tags mis à jour');
+            });
+        }
+
+        // INITIALISATION
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Initialisation de la détection de langue...');
+            
+            optimizeForSocialNetworks();
+            
+            // Double vérification après 500ms
             setTimeout(() => {
-                console.log('🔍 Final OG Tag Check:');
-                console.log('Title:', document.querySelector('meta[property="og:title"]').content);
-                console.log('Description:', document.querySelector('meta[property="og:description"]').content);
-                console.log('Image:', document.querySelector('meta[property="og:image"]').content);
-                console.log('✅ Ready for WhatsApp sharing!');
+                console.log('🔍 Vérification finale des meta tags:');
+                console.log('OG Title:', document.querySelector('meta[property="og:title"]').content);
+                console.log('OG Description:', document.querySelector('meta[property="og:description"]').content);
+                console.log('Page Title:', document.title);
             }, 500);
         });
 
-        // Gestionnaire pour le partage
-        function updateMetaTagsOnShare() {
-            updateMetaTagsForWhatsApp();
-            preloadImageForSocialMedia();
+        // Gestion du partage (pour les navigateurs qui supportent l'API Web Share)
+        if (navigator.share) {
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('main-image')) {
+                    navigator.share({
+                        title: document.title,
+                        text: document.querySelector('meta[property="og:description"]').content,
+                        url: window.location.href,
+                    });
+                }
+            });
         }
-
-        // Écouter les événements de visibilité (pour les onglets background)
-        document.addEventListener('visibilitychange', function() {
-            if (!document.hidden) {
-                updateMetaTagsOnShare();
-            }
-        });
 
     </script>
 </body>
